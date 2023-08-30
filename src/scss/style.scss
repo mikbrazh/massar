@@ -1,0 +1,191 @@
+// Миксины Бутстрапа для _media.sass (порядок именно такой)
+@import "../vendor/bootstrap-5.2.3/scss/functions";
+@import "../vendor/bootstrap-5.2.3/scss/variables";
+@import "../vendor/bootstrap-5.2.3/scss/mixins";
+@import "_mixins/emizer"; // Перевод px в em
+
+// Переменные
+@import "vars";
+
+/* ======= Шрифты START ======= */
+@import "fonts";
+/* ======= Шрифты END ======= */
+
+/* ======= Сброс стилей START ======= */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input,
+textarea {
+  padding: 0;
+  margin: 0;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  background: transparent;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+}
+/* ======= Сброс стилей END ======= */
+
+/* ======= Общий CSS START ======= */
+body {
+  // Центрирование для верстки компонентов
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // height: 100vh;
+
+  font-family: $Roboto400;
+  font-size: 16px;
+  line-height: 1.65;
+  letter-spacing: 1.25px;
+  color: $vulcan;
+
+  a {
+    color: $vulcan;
+  }
+}
+
+::placeholder {
+  color: $milk;
+}
+
+::selection {
+  color: $accent;
+  background-color: $vulcan;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  &--width-100 {
+    width: 100%;
+  }
+}
+
+.is-hidden {
+  display: none
+}
+
+/* ======= Общий CSS END ======= */
+
+/* ======= Кастомный CSS START ======= */
+// @import "_parts/_header";
+// @import "_parts/_sections/_name-section";
+
+// Общие Media
+// @import "media"; // Всегда в конце
+/* ======= Кастомный CSS END ======= */
