@@ -2,21 +2,24 @@
 $default-browser-font-size: 16px;
 
 // Цвета
-$accent:                    #FF1616;
-$vulcan:                    #051326;
-$milk:                      #F7F7F8;
-$grey:                      #CACAD0;
-$lightGrey:                 #EEEFF0;
-$darkGrey:                  #8A8A99;
+$white:                     #FFFFFF;
+$black:                     #1D1D1F;
+$grey:                      #ECEDF2;
+$lightGrey:                 #F6F7F9;
+$blue:                      #271291;
+$purple:                    #4F0F76;
+$red:                       #E20613;
+$darkRed:                   #C0082A;
+$lime:                      #8ECB2A;
 
 $temp:                      #C0C0C0; // Служебный фон
 
 // Шрифты
-$Roboto400:                "Roboto-400", Arial, sans-serif;
-$Roboto700:                "Roboto-700", Arial, sans-serif;
-$Raleway400:               "Raleway-400", Arial, sans-serif;
-$Raleway700:               "Raleway-700", Arial, sans-serif;
+$InterTight-400:            "InterTight-400", Arial, sans-serif;
+$InterTight-500:            "InterTight-500", Arial, sans-serif;
+$InterTight-600:            "InterTight-600", Arial, sans-serif;
+$InterTight-700:            "InterTight-700", Arial, sans-serif;
 
 // Переходы анимации
-$buttons:                   0.1s ease;
-$navButtons:                0.2s ease;
+$button:                   0.1s ease;
+$navButton:                0.2s ease;

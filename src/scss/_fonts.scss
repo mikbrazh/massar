@@ -1,9 +1,9 @@
 @import "_mixins/font-face"; // !!! Проверить подключение всех форматов в _mixins/font-face.sass
 
-@include font-face("Roboto-400",  "../fonts/Roboto/Roboto-Regular",          400);
-@include font-face("Roboto-700",  "../fonts/Roboto/Roboto-Bold",             700);
-@include font-face("Raleway-400", "../fonts/Raleway/static/Raleway-Regular", 400);
-@include font-face("Raleway-700", "../fonts/Raleway/static/Raleway-Bold",    700);
+@include font-face("InterTight-400", "../fonts/Inter_Tight/static/InterTight-Regular", 400);
+@include font-face("InterTight-500", "../fonts/Inter_Tight/static/InterTight-Medium", 500);
+@include font-face("InterTight-600", "../fonts/Inter_Tight/static/InterTight-SemiBold", 600);
+@include font-face("InterTight-700", "../fonts/Inter_Tight/static/InterTight-Bold", 700);
 
 // Подсказка:
 // 100 Тонкий (Волосяной) Thin (Hairline)

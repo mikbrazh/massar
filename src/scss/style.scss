@@ -146,24 +146,26 @@ body {
   // justify-content: center;
   // height: 100vh;
 
-  font-family: $Roboto400;
+  min-width: 340px;
+  font-family: $InterTight-400;
   font-size: 16px;
   line-height: 1.65;
   letter-spacing: 1.25px;
-  color: $vulcan;
+  color: $black;
+  background-color: $temp;
 
   a {
-    color: $vulcan;
+    color: $blue;
   }
 }
 
 ::placeholder {
-  color: $milk;
+  color: $grey;
 }
 
 ::selection {
-  color: $accent;
-  background-color: $vulcan;
+  color: $black;
+  background-color: $grey;
 }
 
 .img-responsive {
@@ -180,10 +182,15 @@ body {
   display: none
 }
 
+.qwe {
+  text-align: center;
+  font-size: 20px;
+}
+
 /* ======= Общий CSS END ======= */
 
 /* ======= Кастомный CSS START ======= */
-// @import "_parts/_header";
+@import "_parts/_header";
 // @import "_parts/_sections/_name-section";
 
 // Общие Media
