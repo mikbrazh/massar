@@ -12,17 +12,15 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 	};
 }
 
-// alert(headerDropdownListFirstChildHtml);
-
 document.querySelectorAll('.header__dropdown').forEach(function (dropDownWrapper) {
-    const dropDownBtn = dropDownWrapper.querySelector('.header__dropdown-button');
+  const dropDownBtn = dropDownWrapper.querySelector('.header__dropdown-button');
 	const dropDownList = dropDownWrapper.querySelector('.header__dropdown-list');
 	const dropDownListItems = dropDownList.querySelectorAll('.header__dropdown-list-item');
 	const dropDownInput = dropDownWrapper.querySelector('.header__dropdown-input-hidden');
-    const headerDropdownList = document.querySelector('.header__dropdown-list');
-    const headerDropdownListFirstChildHtml = headerDropdownList.firstElementChild.innerHTML;
+  const headerDropdownList = document.querySelector('.header__dropdown-list');
+  const headerDropdownListFirstChildHtml = headerDropdownList.firstElementChild.innerHTML;
 
-    dropDownBtn.innerHTML = headerDropdownListFirstChildHtml;
+  dropDownBtn.innerHTML = headerDropdownListFirstChildHtml;
 
 	// Клик по кнопке. Открыть/Закрыть select
 	dropDownBtn.addEventListener('click', function (e) {
@@ -34,11 +32,8 @@ document.querySelectorAll('.header__dropdown').forEach(function (dropDownWrapper
 	dropDownListItems.forEach(function (listItem) {
 		listItem.addEventListener('click', function (e) {
 			e.stopPropagation();
-
-            let listItemHtml = this.innerHTML;
-
-            dropDownBtn.innerHTML = listItemHtml;
-
+      let listItemHtml = this.innerHTML;
+      dropDownBtn.innerHTML = listItemHtml;
 			dropDownBtn.focus();
 			dropDownInput.value = this.dataset.value;
 			dropDownList.classList.remove('header__dropdown-list--visible');
