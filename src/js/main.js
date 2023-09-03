@@ -19,8 +19,10 @@ document.querySelectorAll('.header__dropdown').forEach(function (dropDownWrapper
 	const dropDownInput = dropDownWrapper.querySelector('.header__dropdown-input-hidden');
 	const headerDropdownList = document.querySelector('.header__dropdown-list');
 	const headerDropdownListFirstChildHtml = headerDropdownList.firstElementChild.innerHTML;
+  const headerDropdownListFirstChildData = headerDropdownList.firstElementChild.dataset.value;
 
   dropDownBtn.innerHTML = headerDropdownListFirstChildHtml;
+  dropDownBtn.dataset.value = headerDropdownListFirstChildData;
 
 	// Клик по кнопке. Открыть/Закрыть select
 	dropDownBtn.addEventListener('click', function (e) {
@@ -30,14 +32,31 @@ document.querySelectorAll('.header__dropdown').forEach(function (dropDownWrapper
 
 	// Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
 	dropDownListItems.forEach(function (listItem) {
-		listItem.addEventListener('click', function (e) {
+
+    // Отключаем пункт если он выбран
+    (listItem.dataset.value == dropDownBtn.dataset.value) ?
+      listItem.classList.add('header__dropdown-list-item--disabled') :
+        null;
+
+      listItem.addEventListener('click', function (e) {
 			e.stopPropagation();
 			let thisInnerHtml = this.innerHTML;
 			dropDownBtn.innerHTML = thisInnerHtml;
+
+      let thisData = this.dataset.value;
+      dropDownBtn.dataset.value = thisData;
+
 			dropDownBtn.focus();
 			dropDownInput.value = this.dataset.value;
 			dropDownList.classList.remove('header__dropdown-list--visible');
-            dropDownBtn.classList.remove('header__dropdown-button--active');
+      dropDownBtn.classList.remove('header__dropdown-button--active');
+
+      // Отключаем пункт если он выбран при клике
+      dropDownListItems.forEach(function (dropDownListItem) {
+        (dropDownListItem.dataset.value == dropDownBtn.dataset.value) ?
+            dropDownListItem.classList.add('header__dropdown-list-item--disabled') :
+              dropDownListItem.classList.remove('header__dropdown-list-item--disabled');
+      });
 		});
 	});
 
