@@ -1,3 +1,68 @@
+/* ======= header START ======= */
+.header {
+    font-size: 13px;
+    letter-spacing: 0;
+}
+
+.header__top {
+    background-color: $white;
+}
+
+.header__top-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 73px;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo-link {
+    display: inline-block;
+    margin-right: 14px;
+}
+
+.header__logo-text {
+    display: inline-block;
+    width: 180px;
+    font-family: $InterTight-500;
+    line-height: 1.2;
+}
+
+.header__map {
+    display: flex;
+    align-items: center;
+}
+
+.header__map-img {
+    margin-right: 20px;
+}
+
+.header__map-text {
+    display: inline-block;
+    width: 75px;
+    font-family: $InterTight-500;
+    line-height: 1.2;
+}
+
+.header__hamburger {
+    width: 32px;
+    height: 32px;
+}
+
+.header__hamburger-icon {
+    fill: $blue;
+    transition: fill $button;
+
+    &:active {
+       fill: $purple; 
+    }
+}
+
 /* ======= Header dropdown START ======= */
 .header__dropdown {
     position: relative;
@@ -29,7 +94,7 @@
 .header__dropdown-button:focus,
 .header__dropdown-button--active {
     outline: none;
-    box-shadow: 0px 0px 0px 4px rgba(176, 198, 225, 0.6);
+    box-shadow: 0px 0px 0px 3px $grey;
 }
 
 .header__dropdown-button::after {
@@ -120,70 +185,7 @@
     // width: 17px;
     // height: 12px;
 }
-
 /* ======= Header dropdown END ======= */
-
-/* ======= header START ======= */
-.header {
-    font-size: 13px;
-    letter-spacing: 0;
-}
-
-.header__top {
-    background-color: $temp;
-}
-
-.header__top .container {
-    background-color: $white;
-}
-
-.header__top-inner {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 73px;
-}
-
-.header__logo {
-    display: flex;
-    align-items: center;
-}
-
-.header__logo-link {
-    display: inline-block;
-    margin-right: 14px;
-}
-
-.header__logo-text {
-    display: inline-block;
-    width: 200px;
-    font-family: $InterTight-500;
-    line-height: 1.2;
-}
-
-.header__map {
-    display: flex;
-    align-items: center;
-}
-
-.header__map-img {
-    margin-right: 20px;
-}
-
-.header__map-text {
-    display: inline-block;
-    width: 75px;
-    font-family: $InterTight-500;
-    line-height: 1.2;
-}
-
-.header__lang {
-    width: 84px;
-    height: 32px;
-    background-color: green;
-    border-radius: 20px;
-}
 
 .header__email-text {
     position: relative;
@@ -294,7 +296,22 @@
     font-family: $InterTight-500;
     color: $white;
 }
-
-
-
 /* ======= header END ======= */
+
+/* ======= Header Media START ======= */
+@media (min-width: 480px) and (max-width: 960px) {
+    .header__top .col {
+      padding: 0;
+    }
+}
+
+@media (max-width: 479px) {
+    .header__logo-link {
+        margin-right: 0;
+    }
+
+    .header__logo {
+        margin-right: 15vw;
+    }
+}
+/* ======= Header Media END ======= */
