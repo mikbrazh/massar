@@ -3,7 +3,7 @@
     position: relative;
     margin-top: -46px;
 
-    background-image: linear-gradient(rgba(24, 7, 111, 0.7), rgba(24, 7, 111, 0.7));
+    background-image: linear-gradient(rgba(24, 7, 111, 0.5), rgba(24, 7, 111, 0.5));
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -235,33 +235,37 @@
 
 @media (max-width: 479px) {
     .promo__layout {
-        padding-top: 140px;
+        padding-top: 150px;
         padding-bottom: 60px;
     }
 
     .promo__title {
-        font-size: 35px;
+        font-size: 33px;
         line-height: 1.25;
     }
 
     .promo__warranty {
-        top: -46px;
-        left: 64px;
+        top: -57px;
+        left: 44px;
     }
 
     .promo__promo-list {
         margin-bottom: 45px;
     }
 
+    .promo__promo-list-item {
+      font-size: 15px;
+    }
+
     .promo__cta-button {
         margin-bottom: 45px;
         padding: 20px 35px;
-        font-size: 18px;
+        font-size: 17px;
         line-height: 1.2;
     }
 
     .promo__advantages-list-item-text {
-        font-size: 17px;
+        font-size: 15px;
     }
 }
 
