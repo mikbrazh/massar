@@ -2,9 +2,14 @@
 .promo {
     position: relative;
     margin-top: -46px;
+
+    background-image: linear-gradient(rgba(24, 7, 111, 0.7), rgba(24, 7, 111, 0.7));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.promo__bg {
+.promo__video-bg {
     position: absolute;
     top: 0;
     left: 0;
@@ -17,20 +22,52 @@
 }
 
 .promo__layout {
-    padding-top: 170px;
-    padding-bottom: 75px;
+    padding-top: 172px;
+    padding-bottom: 98px;
     color: $white;
 }
 
 .promo__title-block {
-    margin-bottom: 30px;
-    width: 780px;
+    position: relative;
+    margin-bottom: 28px;
+    max-width: 780px;
 }
 
 .promo__title {
     font-family: $InterTight-700;
     font-size: 84px;
-    line-height: 0.85;
+    line-height: 0.82;
+}
+
+.promo__warranty {
+    position: absolute;
+    top: -46px;
+    left: 203px;
+    transform: rotate(14deg);
+    display: flex;
+    gap: 0 12px;
+    padding: 15px 30px;
+    width: 275px;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(39, 18, 145, 0.20);
+    backdrop-filter: blur(10px);
+}
+
+.promo__warranty-icon {
+    width: 33px;
+    height: 35px;
+}
+
+.promo__warranty-text {
+    font-family: $InterTight-400;
+    font-size: 18px;
+    line-height: 1;
+    color: #FFF;
+}
+
+.promo__warranty-text--700 {
+    font-family: $InterTight-700;
 }
 
 .promo__promo-list {
@@ -38,15 +75,17 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 80px;
-    width: 475px;
+    margin-bottom: 85px;
+    max-width: 540px;
 }
 
 .promo__promo-list-item {
-    padding: 7px 20px;
+    padding: 2px 22px;
+    font-family: $InterTight-400;
+    font-size: 20px;
     border-radius: 100px;
     border: 1px solid rgba(255, 255, 255, 0.50);
-    backdrop-filter: blur(10px);
+    // backdrop-filter: blur(10px);
 }
 
 .promo__cta-button {
@@ -56,6 +95,8 @@
     border-radius: 100px;
     background-color: $red;
     text-transform: uppercase;
+    font-family: $InterTight-700;
+    font-size: 20px;
     color: $white;
     transition: $button;
     &:hover {
@@ -71,31 +112,160 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 40px 140px;
+    gap: 40px 145px;
 }
 
 .promo__advantages-list-item {
     position: relative;
-    font-family: $InterTight-400;
-    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0 17px;
 }
 
 .promo__advantages-list-item-image {
-    position: absolute;
-    top: 5px;
-    left: -40px;
     width: 24px;
     height: 24px;
+}
+
+.promo__advantages-list-item-text {
+    // display: inline-block;
+    font-family: $InterTight-400;
+    font-size: 20px;
+    line-height: 1.2;
 }
 
 .promo__advantages-list-item-text--700 {
     font-family: $InterTight-700;
 }
-
-
-
-
-
-
-
 /* ======= promo END ======= */
+
+/* ======= Header Media START ======= */
+@media (min-width: 480px) and (max-width: 1279px) {
+    .promo .col {
+      padding: 0;
+    }
+
+    .promo__layout {
+        padding-bottom: 110px;
+    }
+}
+
+@media (max-width: 1279px) {
+    .promo__advantages-list {
+        gap: 30px 30px;
+    }
+
+    .promo__advantages-list-item {
+        gap: 0 15px;
+    }
+
+    .promo__promo-list {
+        margin-bottom: 65px;
+    }
+}
+
+@media (max-width: 959px) {
+    .promo__layout {
+        padding-top: 150px;
+    }
+
+    .promo__title {
+        font-size: 64px;
+        line-height: 1;
+    }
+
+    .promo__warranty {
+        position: absolute;
+        top: -11px;
+        left: 240px;
+    }
+
+    .promo__promo-list {
+        margin-bottom: 45px;
+    }
+
+    .promo__cta-button {
+        margin-bottom: 45px;
+    }
+}
+
+@media (max-width: 639px) {
+    .promo__layout {
+        padding-top: 115px;
+    }
+
+    .promo__title {
+        font-size: 48px;
+        line-height: 1.25;
+    }
+
+    .promo__warranty {
+        top: -22px;
+        left: 187px;
+    }
+
+    .promo__promo-list {
+        margin-bottom: 30px;
+        gap: 10px 5px;
+    }
+
+    .promo__promo-list-item {
+        font-size: 17px;
+    }
+
+    .promo__cta-button {
+        margin-bottom: 30px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .promo__advantages-list {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .promo__advantages-list-item {
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 479px) {
+    .promo__layout {
+        padding-top: 140px;
+        padding-bottom: 60px;
+    }
+
+    .promo__title {
+        font-size: 35px;
+        line-height: 1.25;
+    }
+
+    .promo__warranty {
+        top: -46px;
+        left: 64px;
+    }
+
+    .promo__promo-list {
+        margin-bottom: 45px;
+    }
+
+    .promo__cta-button {
+        margin-bottom: 45px;
+        padding: 20px 35px;
+        font-size: 18px;
+        line-height: 1.2;
+    }
+
+    .promo__advantages-list-item-text {
+        font-size: 17px;
+    }
+}
+
+
+
+
+/* ======= Header Media END ======= */
