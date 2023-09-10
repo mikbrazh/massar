@@ -2,7 +2,6 @@
 .services__layout {
   padding-top: 120px;
   padding-bottom: 120px;
-  // background-color: $temp;
 }
 
 .services__title {
@@ -11,6 +10,7 @@
   font-family: $InterTight-400;
   font-size: 45px;
   line-height: 1.25;
+  letter-spacing: 0;
 }
 
 .services__title--700 {
@@ -37,9 +37,6 @@
   border-radius: 20px;
   background-color: $lightGrey;
   transition: color $button;
-  &:last-child {
-    flex: 1;
-  }
   &:hover {
     background-color: $grey;
     cursor: pointer;
@@ -93,7 +90,12 @@
 }
 
 /* ======= services Media START ======= */
-@media (max-width: 1365px) {
+@include media-breakpoint-down(xxl) {
+  .services__layout {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
   .services__list-item {
     width: 270px;
   }
@@ -103,16 +105,62 @@
   }
 }
 
+@include media-breakpoint-down(xl) {
+  .services .col {
+    padding: 0;
+  }
 
-@media (max-width: 1279px) {
+  .services__title {
+    margin-bottom: 45px;
+  }
+
   .services__list-item-link {
     font-size: 18px;
   }
+
+  .services__list-item {
+    width: 220px;
+  }
 }
 
-@media (max-width: 639px) {
+@include media-breakpoint-down(lg) {
+  .services__title {
+    font-size: 44px;
+  }
+
+  .services__list-item {
+    width: 300px;
+  }
+}
+
+@include media-breakpoint-down(md) {
   .services__title {
     font-size: 36px;
+  }
+
+  .services__list-item {
+    width: 220px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .services .col {
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-top: var(--bs-gutter-y);
+  }
+
+  .services__layout {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .services__title {
+    margin-bottom: 30px;
+  }
+
+  .services__list-item {
+    width: 100%;
   }
 }
 /* ======= services Media END ======= */
