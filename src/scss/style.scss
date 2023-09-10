@@ -183,9 +183,38 @@ body {
   display: none
 }
 
-.qwe {
-  text-align: center;
-  font-size: 20px;
+.input-default {
+  width: 100%;
+  height: 60px;
+  padding: 18px 135px 18px 30px;
+  border-radius: 100px;
+  border: 1px solid $grey;
+  background-color: $white;
+  color: $black;
+  &::placeholder {
+    color: $black;
+    opacity: 0.5;
+  }
+}
+
+.button-default {
+  width: 100%;
+  height: 60px;
+  padding: 12px 38px;
+  font-family: $InterTight-700;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 100px;
+  background-color: $red;
+  color: $white;
+  transition: color $button;
+  letter-spacing: 0;
+  &:hover {
+    background-color: $darkRed;
+  }
+  &:active {
+    background-color: $purple;
+  }
 }
 
 /* ======= Общий CSS END ======= */
@@ -194,6 +223,7 @@ body {
 @import "_parts/_header";
 @import "_parts/_promo";
 @import "_parts/_services";
+@import "_parts/_solution";
 // @import "_parts/_sections/_name-section";
 
 // Общие Media
