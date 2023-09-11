@@ -2,7 +2,7 @@
 .solution__layout {
   padding: 100px 0 100px 100px;
   border-radius: 20px;
-  background-image: url("../img/@2x/solution-bg@2x.jpg");
+  background-image: url("../img/@2x/solution-bg--1280@2x.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -36,15 +36,8 @@
   font-size: 16px;
   letter-spacing: 0;
   color: $black;
+  line-height: 1.25;
 }
-
-// .solution__form-input {
-
-// }
-
-// .solution__form-button {
-  
-// }
 
 .solution__form-agreement {
   font-family: $InterTight-400;
@@ -66,4 +59,73 @@
   }
 }
 
+/* ======= solution Media START ======= */
+@include media-breakpoint-down(xxl) {
+  .solution__layout {
+    padding: 90px 0 70px 60px;
+  }
+  .solution__title {
+    max-width: 630px;
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  .solution .col {
+    padding: 0;
+  }
+
+  .solution__layout {
+    padding: 90px 0 90px 25px;
+    background-image: url("../img/@2x/solution-bg--960@2x.jpg");
+  }
+  .solution__title {
+    max-width: 550px;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .solution__layout {
+    padding: 60px 0 75px 25px;
+    background-image: url("../img/@2x/solution-bg--640@2x.jpg");
+  }
+  .solution__title {
+    max-width: 465px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .solution__layout {
+    padding: 60px 0 75px 20px;
+    background-image: url("../img/@2x/solution-bg--480@2x.jpg");
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .solution .col {
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-top: var(--bs-gutter-y);
+  }
+
+  .solution__layout {
+    padding: 60px 15px 70px;
+    background-image: url("../img/@2x/solution-bg--320@2x.jpg");
+  }
+
+  .solution__title {
+    margin-bottom: 35px;
+    max-width: 100%;
+    font-size: 28px;
+  }
+
+  .solution__form-button {
+    font-size: 13px;
+    line-height: 1.25;
+  }
+
+  .solution__form-agreement {
+    font-size: 11px;
+  }
+}
+/* ======= solution Media END ======= */
 /* ======= solution END ======= */
