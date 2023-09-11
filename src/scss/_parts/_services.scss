@@ -1,20 +1,15 @@
 /* ======= services START ======= */
 .services__layout {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 120px 0 120px 0;
+  background-color: $temp;
 }
 
 .services__title {
   margin-bottom: 60px;
-  max-width: 800px;
-  font-family: $InterTight-400;
-  font-size: 45px;
-  line-height: 1.25;
-  letter-spacing: 0;
-}
-
-.services__title--700 {
+  color: $black;
   font-family: $InterTight-700;
+  font-size: 45px;
+  letter-spacing: 0;
 }
 
 .services__list {
@@ -22,147 +17,72 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 17px;
+  gap: 24px;
+  margin-bottom: 24px;
 }
 
 .services__list-item {
   position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-end;
-  padding: 20px;
-  width: 310px;
-  min-height: 180px;
+  padding: 110px 20px 20px 20px;
+  width: 305px;
   border-radius: 20px;
-  background-color: $lightGrey;
-  transition: color $button;
-  &:hover {
-    background-color: $grey;
-    cursor: pointer;
-  }
-  &:active .services__list-item-square {
-    background-color: $blue;
-  }
-  &:active .services__list-item-square-arrow {
-    fill: $white;
-  }
+  background-color: $white;
+}
+
+.services__list-item-link {
+  display: block;
 }
 
 .services__list-item-image {
   position: absolute;
   top: 20px;
   left: 20px;
+  width: 60px;
+  height: 60px;
 }
 
-.services__list-item-link {
-  font-family: $InterTight-600;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: 0;
-  color: $black;
-  &:hover {
-    color: $black;
-    cursor: default;
-  }
+.services__list-item-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
+
+.services__list-item-text-title {
+  color: $black;
+  font-family: $InterTight-600;
+  font-size: 22px;
+  letter-spacing: 0;
+  line-height: 1.25;
+}
+
+.services__list-item-text {
+  color: $black;
+  font-family: $InterTight-400;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 1.25;
+} 
 
 .services__list-item-square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 20px;
   right: 20px;
-  display: flex;
   width: 40px;
   height: 40px;
-  padding: 13px;
-  justify-content: center;
-  align-items: center;
   border-radius: 10px;
-  background-color: $white;
-  transition: background-color $button;
+  background-color: $grey;
 }
 
 .services__list-item-square-arrow {
   width: 14px;
   height: 14px;
-  fill: $blue;
   transition: fill $button;
 }
 
-/* ======= services Media START ======= */
-@include media-breakpoint-down(xxl) {
-  .services__layout {
-    padding-top: 90px;
-    padding-bottom: 90px;
-  }
 
-  .services__list-item {
-    width: 270px;
-  }
 
-  .services__list-item-link {
-    font-size: 18px;
-  }
-}
-
-@include media-breakpoint-down(xl) {
-  .services .col {
-    padding: 0;
-  }
-
-  .services__title {
-    margin-bottom: 45px;
-  }
-
-  .services__list-item-link {
-    font-size: 18px;
-  }
-
-  .services__list-item {
-    width: 220px;
-  }
-}
-
-@include media-breakpoint-down(lg) {
-  .services__title {
-    font-size: 44px;
-  }
-
-  .services__list-item {
-    width: 300px;
-  }
-}
-
-@include media-breakpoint-down(md) {
-  .services__title {
-    font-size: 36px;
-  }
-
-  .services__list-item {
-    width: 220px;
-  }
-}
-
-@include media-breakpoint-down(sm) {
-  .services .col {
-    padding-right: calc(var(--bs-gutter-x) * 0.5);
-    padding-left: calc(var(--bs-gutter-x) * 0.5);
-    margin-top: var(--bs-gutter-y);
-  }
-
-  .services__layout {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-
-  .services__title {
-    margin-bottom: 30px;
-  }
-
-  .services__list-item {
-    width: 100%;
-  }
-}
-/* ======= services Media END ======= */
 
 /* ======= services END ======= */
