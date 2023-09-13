@@ -185,13 +185,14 @@ body {
 
 .input-default {
   width: 100%;
-  height: 60px;
-  padding: 18px 30px;
+  min-height: 60px;
+  padding: 16px 30px;
   font-size: 20px;
   border-radius: 100px;
   border: 1px solid $grey;
   background-color: $white;
   color: $black;
+  line-height: 0;
   &::placeholder {
     color: $black;
     opacity: 0.5;
@@ -200,8 +201,8 @@ body {
 
 .button-default {
   width: 100%;
-  height: 60px;
-  padding: 12px 38px;
+  min-height: 60px;
+  padding: 16px 38px;
   font-family: $InterTight-700;
   font-size: 16px;
   text-transform: uppercase;
@@ -218,6 +219,18 @@ body {
   }
 }
 
+.agreement-link-default {
+  color: $blue;
+  transition: $button;
+  &:hover {
+    color: $blue;
+    border-bottom: 1px solid $blue;
+  }
+  &:active {
+    color: $purple;
+  }
+}
+
 /* ======= Общий CSS END ======= */
 
 /* ======= Кастомный CSS START ======= */
@@ -228,6 +241,7 @@ body {
 @import "_parts/_optimization";
 @import "_parts/_services";
 @import "_parts/_convinced";
+@import "_parts/_implementation";
 // @import "_parts/_sections/_name-section";
 
 // Общие Media

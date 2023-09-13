@@ -1,0 +1,94 @@
+/* ======= implementation START ======= */
+.implementation {
+    position: relative;
+    background-image: url("../img/@2x/implementation-bg@2x.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+.implementation__layout {
+    position: relative;
+    padding: 105px 0 105px ; 
+}
+.implementation__title {
+    max-width: 750px;
+    margin-bottom: 28px;
+    color: $black;
+    font-family: $InterTight-400;
+    font-size: 45px;
+    letter-spacing: 0;
+    line-height: 1.15;
+}
+.implementation__title--700 {
+    font-family: $InterTight-700;
+}
+.implementation__list {
+    padding-left: 31px;
+    margin-bottom: 55px;
+    max-width: 620px;
+}
+.implementation__list-item {
+    position: relative;
+    margin-bottom: 14px;
+    color: $black;
+    font-family: $InterTight-400;
+    font-size: 20px;
+    line-height: 1.25;
+    letter-spacing: 0;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        top: 4px;
+        left: -31px;
+        width: 17px;
+        height: 17px;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAxNyAxNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzQxMl81NjY1KSI+CjxwYXRoIGQ9Ik0yLjEwNTA2IDAuMDI2NDczQzEuMTIyODQgMC4yMzQ4MDcgMC4yNzQ5MzggMS4wODQ4MSAwLjA2OTI1OTMgMi4wNjM5N0MtMC4wMjMwODY0IDIuNTAxNDcgLTAuMDIzMDg2NCAxMy40MTgxIDAuMDY5MjU5MyAxMy44NTU2QzAuMjI4NzY1IDE0LjYxNCAwLjc3ODY0MiAxNS4zMTgxIDEuNDc5NjMgMTUuNjU5OEMyLjEyMTg1IDE1Ljk3NjUgMS43NTY2NyAxNS45NTk4IDguMDY1NTYgMTUuOTU5OEMxNC4zNzAyIDE1Ljk1OTggMTQuMDE3NyAxNS45NzIzIDE0LjY1NTcgMTUuNjY0QzE1LjM0NDEgMTUuMzI2NSAxNS45MDY1IDE0LjYwMTUgMTYuMDYxOSAxMy44NTU2QzE2LjE1ODQgMTMuNDA1NiAxNi4xNTQyIDcuODU5ODEgMTYuMDU3NyA3LjYzNDgxQzE1LjkxOTEgNy4zMDU2NCAxNS41OTU5IDcuMDg0ODEgMTUuMjQzMyA3LjA4NDgxQzE0Ljg3NCA3LjA4NDgxIDE0LjYwNTMgNy4yNDMxNCAxNC40MzMyIDcuNTYzOThDMTQuMzQwOSA3LjczMDY0IDE0LjM0MDkgNy43NTk4MSAxNC4zMTk5IDEwLjY3MjNMMTQuMjk4OSAxMy42MTRMMTQuMTg1NiAxMy43NzY1QzE0LjEyMjYgMTMuODY0IDE0LjAwMDkgMTMuOTg0OCAxMy45MTI3IDE0LjA0MzFMMTMuNzU3NCAxNC4xNDczSDguMDY1NTZIMi4zNzM3TDIuMjE4MzkgMTQuMDQzMUMyLjEzMDI1IDEzLjk4NDggMi4wMDg1MiAxMy44NjQgMS45NDU1NiAxMy43NzY1TDEuODMyMjIgMTMuNjE0VjcuOTU1NjRWMi4zMDE0N0wxLjk1ODE1IDIuMTIyMzFDMi4wMjk1MSAyLjAyNjQ3IDIuMTY4MDIgMS45MDE0NyAyLjI2ODc3IDEuODQ3MzFMMi40NTM0NiAxLjc1MTQ3SDcuMDY2NTRDMTAuNDYyMyAxLjc1MTQ3IDExLjczIDEuNzM4OTcgMTEuODc2OSAxLjcwMTQ3QzEyLjE1NCAxLjYzNDgxIDEyLjQ0MzYgMS4zMzg5NyAxMi41MTA3IDEuMDU5ODFDMTIuNjExNSAwLjY1MTQ3NCAxMi40MjY4IDAuMjU1NjQgMTIuMDQ5IDAuMDY4MTRMMTEuODI2NSAtMC4wNDAxOTM2TDcuMTA0MzIgLTAuMDM2MDI3QzMuMjI1OCAtMC4wMzYwMjcgMi4zMjc1MyAtMC4wMjM1MjYyIDIuMTA1MDYgMC4wMjY0NzNaIiBmaWxsPSIjRTIwNjEzIi8+CjxwYXRoIGQ9Ik0xNS44NTM4IDAuODk3MjJDMTUuNzYxNSAwLjkzMDU1MiAxNS42Nzc1IDAuOTU5NzIgMTUuNjY0OSAwLjk1OTcyQzE1LjY1MjMgMC45NTk3MiAxMy45Mzk3IDIuNjUxMzkgMTEuODU3OCA0LjcxODA1TDguMDY3MzggOC40ODA1NUw2Ljk4NDQyIDcuNDA5NzJDNi4zOTI1NyA2LjgyMjIyIDUuODM4NDkgNi4zMDk3MiA1Ljc1ODc0IDYuMjY4MDVDNS40NTIzMiA2LjEwOTcyIDQuOTY5NiA2LjIwMTM5IDQuNzIxOTUgNi40NjgwNUM0LjQ5NTI4IDYuNzA1NTUgNC40MzIzMiA3LjE2Mzg5IDQuNTc5MjMgNy40NTEzOUM0LjYyNTQxIDcuNTM0NzIgNS4zMjYzOSA4LjI2Mzg5IDYuMTQ0OTEgOS4wNzIyMkM3LjY4OTYgMTAuNTk3MiA3LjcyMzE4IDEwLjYyNjQgOC4wNjczOCAxMC42MjY0QzguNDI4MzcgMTAuNjI2NCA4LjI3MzA2IDEwLjc3MjIgMTIuNjk3MyA2LjM4NDcyQzE2LjA3NjMgMy4wMzA1NSAxNi44OTQ4IDIuMTk3MjIgMTYuOTQ5NCAyLjA1NTU1QzE3LjA1MDEgMS43OTMwNSAxNy4wMTIzIDEuNDU5NzIgMTYuODU3IDEuMjM4ODlDMTYuNjMwMyAwLjkxODA1MyAxNi4xOTM4IDAuNzY4MDUzIDE1Ljg1MzggMC44OTcyMloiIGZpbGw9IiNFMjA2MTMiLz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMF80MTJfNTY2NSI+CjxyZWN0IHdpZHRoPSIxNyIgaGVpZ2h0PSIxNyIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+}
+.implementation__list-item--grey {
+    color: $darkGrey;
+}
+.implementation__form {
+    max-width: 100%;
+}
+.implementation__form-input {
+    display: inline-block;
+    margin-right: 20px;
+    max-width: 425px;
+}
+.implementation__form-button {
+    display: inline-block;
+    max-width: 425px;
+}
+.implementation__form-agreement {
+    padding-top: 10px;
+    max-width: 455px;
+    color: $black;
+    font-family: $InterTight-400;
+    font-size: 12px;
+    line-height: 1.25;
+    letter-spacing: 0;
+}
+
+.implementation__worker-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: 115%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+/* ======= implementation END ======= */

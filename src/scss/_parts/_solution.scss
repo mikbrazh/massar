@@ -61,18 +61,6 @@
   line-height: 1.25;
 }
 
-.solution__form-agreement-link {
-  color: $blue;
-  transition: $button;
-  &:hover {
-    color: $blue;
-    border-bottom: 1px solid $blue;
-  }
-  &:active {
-    color: $purple;
-  }
-}
-
 /* ======= solution Media START ======= */
 @include media-breakpoint-down(xxl) {
   .solution__layout {

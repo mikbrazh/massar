@@ -1,7 +1,113 @@
 /* ======= convinced START ======= */
+.convinced__layout {
+    padding: 105px 0 105px 0;
+}
+.convinced__title {
+    margin-bottom: 55px;
+    color: $black;
+    font-family: $InterTight-400;
+    font-size: 45px;
+    letter-spacing: 0;
+    line-height: 1.25;
+}
+.convinced__title--700 {
+    font-family: $InterTight-700;
+}
+.convinced-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 34px;
+}
+.convinced-list-item { 
+    display: flex;
+    flex: 1 0 0%;
+    flex-direction: column;
+    gap: 28px;
+    padding-right: 10px;
+}
+.convinced-list-item-image {
+    width: 58px;
+    height: 58px;
+}
+.convinced-list-item-text {
+    color: $black;
+    font-family: $InterTight-400;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 1.25;
+}
+.convinced-list-item-text--700 {
+    font-family: $InterTight-700;
+}
 
+/* ======= convinced Media START ======= */
+@include media-breakpoint-down(xxl) {
+    .convinced__layout {
+        padding: 90px 0 105px 0;
+    }
+}
 
+@include media-breakpoint-down(xl) {
+    .convinced .col {
+        padding: 0;
+    }
+    .convinced__layout {
+        padding: 90px 0 90px 0;
+    }
+    .convinced__title {
+        margin-bottom: 47px;
+    }
+    .convinced-list {
+        gap: 20px;
+    }
+    .convinced-list-item { 
+        padding-right: 0;
+    }
+}
 
+@include media-breakpoint-down(lg) {
+    .convinced-list {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .convinced-list-item { 
+        display: flex;
+        flex: 1 0 0%;
+        flex-direction: row;
+        gap: 28px;
+    }
+}
 
+@include media-breakpoint-down(md) {
+    .convinced__title {
+        font-size: 36px;
+    }
+    .convinced-list-item {
+        padding-right: 10px;
+        gap: 18px;
+    }
+}
 
+@include media-breakpoint-down(sm) {
+    .convinced .col {
+      padding-right: calc(var(--bs-gutter-x) * 0.5);
+      padding-left: calc(var(--bs-gutter-x) * 0.5);
+      margin-top: var(--bs-gutter-y);
+    }
+    .convinced__layout {
+        padding: 60px 0 60px 0;
+    }
+    .convinced__title {
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+    .convinced-list-item { 
+        flex-direction: column;
+        gap: 18px;
+    }
+}
+/* ======= convinced Media END ======= */
 /* ======= convinced END ======= */
