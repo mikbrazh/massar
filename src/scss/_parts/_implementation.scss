@@ -1,7 +1,7 @@
 /* ======= implementation START ======= */
 .implementation {
     position: relative;
-    background-image: url("../img/@2x/implementation-bg@2x.jpg");
+    background-image: url("../img/@2x/implementation-bg--1366@2x.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -90,5 +90,92 @@
     z-index: -1;
 }
 
+/* ======= implementation Media START ======= */
+@include media-breakpoint-down(xxl) {
+    .implementation__layout {
+        padding: 75px 0 75px ; 
+    }
+}
 
+@include media-breakpoint-down(xl) {
+    .implementation .col {
+        padding: 0;
+    }
+    .implementation__worker-image {
+        object-position: 185%;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .implementation {
+        background-image: url("../img/@2x/implementation-bg--640@2x.jpg");
+    }
+    .implementation__worker-image {
+        display: none;
+    }
+    .implementation__title {
+        margin-bottom: 40px;
+    }
+    .implementation__list {
+        padding-left: 30px;
+        margin-bottom: 40px;
+    }
+    .implementation__list-item:before {
+        left: -30px;
+    }
+    .implementation__form-input {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .implementation__form-agreement {
+        max-width: 445px;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .implementation {
+        background-image: url("../img/@2x/implementation-bg--480@2x.jpg");
+    }
+    .implementation__title {
+        font-size: 36px;
+    }
+    .implementation__list {
+        padding-left: 31px;
+        margin-bottom: 40px;
+    }
+    .implementation__list-item:before {
+        left: -31px;
+    }
+    .implementation__list {
+        margin-bottom: 45px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .implementation {
+        background-image: url("../img/@2x/implementation-bg--320@2x.jpg");
+    }
+    .implementation .col {
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+        margin-top: var(--bs-gutter-y);
+    }
+    .implementation__layout {
+        padding: 60px 0 60px;
+    }
+    .implementation__list-item {
+        font-size: 19px;
+    }
+    .implementation__list {
+        margin-bottom: 30px;
+    }
+    .implementation__form-button {
+        font-size: 15px;
+        line-height: 1.15;
+    }
+    .implementation__form-agreement {
+        font-size: 11px;
+    }
+}
+/* ======= implementation Media END ======= */
 /* ======= implementation END ======= */

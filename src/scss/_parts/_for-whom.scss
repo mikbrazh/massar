@@ -1,0 +1,124 @@
+/* ======= for-whom START ======= */
+.for-whom__layout {
+    padding: 105px 0 105px 0;
+}
+.for-whom__title {
+    margin-bottom: 55px;
+    color: $black;
+    font-family: $InterTight-400;
+    font-size: 45px;
+    letter-spacing: 0;
+    line-height: 1.25;
+}
+.for-whom__title--700 {
+    font-family: $InterTight-700;
+}
+.for-whom__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
+}
+.for-whom__list-item {
+    position: relative;
+    flex: 1 0 21%;
+    padding: 20px 20px 20px 20px;
+    min-width: 300px;
+    min-height: 185px;
+    border-radius: 20px;
+    border: 2px solid $grey;
+}
+.for-whom__list-item-title {
+    margin-bottom: 16px;
+    color: $blue;
+    font-family: $InterTight-600;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: 1.25;
+}
+.for-whom__list-item-text {
+    color: $black;
+    font-family: $InterTight-400;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 1.25;
+}
+.for-whom__list-item-image {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    z-index: -1;
+}
+.for-whom__list-item--link {
+    padding: 0;
+    overflow: hidden;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        background-color: $white;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0tMC4wMTU2MjUgMTIuMzUwMUMwLjA1MDUyNzcgMTIuMjg3NyAwLjExNzg0MSAxMi4yMjY1IDAuMTgxNjczIDEyLjE2NDJMOS44Mjk1MiAyLjU2NTY0TDEwLjA1MjQgMi4zNDM5NUgyLjQyMTU4TDIuNDY1NjggMC4wMzQ2NzI3TDIuNDk4MTggMC4wMDExODgyOEMyLjU4NTg4IDAuMDE0MjIyMSAyLjY3NDIgMC4wMjI2OTk0IDIuNzYyNzkgMC4wMjY1OTAzSDEzLjc2ODVDMTMuODQzMyAwLjAyMzY2NDUgMTMuOTE3OCAwLjAxNTE3NDkgMTMuOTkxMyAwLjAwMTE4ODI4VjExLjUwMjVIMTEuNzYwN1YzLjk5NzM5QzExLjY1NzQgNC4wODA1MyAxMS42MTY4IDQuMTA0NzggMTEuNTgyIDQuMTM5NDJDNy4xOTk2NiA4LjQ5NzAyIDYuMTAwNiA5LjU5MTYyIDEuNzE3MTEgMTMuOTUzOEMxLjY5NTc4IDEzLjk3NTUgMS42NzU2NCAxMy45OTgyIDEuNjU2NzYgMTQuMDIyQzEuMDk4NTMgMTMuNDYyIDAuNTM5MTI5IDEyLjkwNzcgLTAuMDE1NjI1IDEyLjM1MDFaIiBmaWxsPSIjMjcxMjkxIi8+Cjwvc3ZnPgo=");
+        background-size: 14px 14px;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        z-index: 1;
+    }
+}
+.for-whom__list-item-link {
+    display: block;
+    padding: 20px 20px 20px 20px;
+    width: 100%;
+    height: 100%;
+    background-color: $blue;
+    &:hover .for-whom__list-item-image--link {
+        opacity: 0.5;
+    }
+}
+.for-whom__list-item-title--white {
+    color: $white;
+}
+.for-whom__list-item-text--white {
+    color: $white;
+}
+.for-whom__list-item-image--link {
+    width: 140px;
+    height: 140px;
+    z-index: 0;
+    fill: $white;
+    opacity: 0.15;
+    transition: $button;
+}
+/* ======= for-whom Media START ======= */
+@include media-breakpoint-down(xxl) {
+
+}
+
+@include media-breakpoint-down(xl) {
+
+}
+
+@include media-breakpoint-down(lg) {
+
+}
+
+@include media-breakpoint-down(md) {
+
+}
+
+@include media-breakpoint-down(sm) {
+
+}
+
+
+
+
+
+/* ======= for-whom Media END ======= */
+/* ======= for-whom END ======= */
