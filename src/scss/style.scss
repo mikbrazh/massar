@@ -1,3 +1,5 @@
+// @use "sass:map"; // нужно для lite-custom-grid
+
 // Миксины Бутстрапа для _media.sass (порядок именно такой)
 @import "bootstrap-custom-grid";
 @import "../vendor/bootstrap-5.2.3/scss/functions";
@@ -11,6 +13,10 @@
 /* ======= Шрифты START ======= */
 @import "fonts";
 /* ======= Шрифты END ======= */
+
+/* ======= Своя кастомная сетка START ======= */
+// @import "lite-custom-grid";
+/* ======= Своя кастомная сетка END ======= */
 
 /* ======= Сброс стилей START ======= */
 *,
@@ -243,6 +249,8 @@ body {
 @import "_parts/_convinced";
 @import "_parts/_implementation";
 @import "_parts/_for-whom";
+@import "_parts/_advantages";
+@import "_parts/_stages";
 // @import "_parts/_sections/_name-section";
 
 // Общие Media

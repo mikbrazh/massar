@@ -3,11 +3,6 @@
   position: relative;
   padding: 100px 0 100px 100px;
   border-radius: 20px;
-  // background-image: url("../img/@2x/solution-bg--1280@2x.jpg");
-  // background-size: cover;
-  // background-position: center;
-  // background-repeat: no-repeat;
-  
 }
 
 .solution__bg {
@@ -72,13 +67,12 @@
 }
 
 @include media-breakpoint-down(xl) {
-  .solution .col {
+  .solution .container {
     padding: 0;
   }
 
   .solution__layout {
     padding: 90px 0 90px 25px;
-    // background-image: url("../img/@2x/solution-bg--960@2x.jpg");
   }
   .solution__title {
     max-width: 550px;
@@ -88,7 +82,6 @@
 @include media-breakpoint-down(lg) {
   .solution__layout {
     padding: 60px 0 75px 25px;
-    // background-image: url("../img/@2x/solution-bg--640@2x.jpg");
   }
   .solution__title {
     max-width: 465px;
@@ -98,12 +91,11 @@
 @include media-breakpoint-down(md) {
   .solution__layout {
     padding: 60px 0 75px 20px;
-    // background-image: url("../img/@2x/solution-bg--480@2x.jpg");
   }
 }
 
 @include media-breakpoint-down(sm) {
-  .solution .col {
+  .solution .container {
     padding-right: calc(var(--bs-gutter-x) * 0.5);
     padding-left: calc(var(--bs-gutter-x) * 0.5);
     margin-top: var(--bs-gutter-y);
@@ -111,7 +103,6 @@
 
   .solution__layout {
     padding: 60px 15px 70px;
-    // background-image: url("../img/@2x/solution-bg--320@2x.jpg");
   }
 
   .solution__title {

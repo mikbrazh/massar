@@ -82,7 +82,7 @@
 }
 
 @include media-breakpoint-down(xl) {
-    .optimization .col {
+    .optimization .container {
         padding: 0;
     }
     .optimization__title {
@@ -143,7 +143,7 @@
 }
 
 @include media-breakpoint-down(sm) {
-    .optimization .col {
+    .optimization .container {
         padding-right: calc(var(--bs-gutter-x) * 0.5);
         padding-left: calc(var(--bs-gutter-x) * 0.5);
         margin-top: var(--bs-gutter-y);

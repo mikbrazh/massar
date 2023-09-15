@@ -50,7 +50,7 @@
 }
 
 @include media-breakpoint-down(xl) {
-    .convinced .col {
+    .convinced .container {
         padding: 0;
     }
     .convinced__layout {
@@ -92,7 +92,7 @@
 }
 
 @include media-breakpoint-down(sm) {
-    .convinced .col {
+    .convinced .container {
       padding-right: calc(var(--bs-gutter-x) * 0.5);
       padding-left: calc(var(--bs-gutter-x) * 0.5);
       margin-top: var(--bs-gutter-y);

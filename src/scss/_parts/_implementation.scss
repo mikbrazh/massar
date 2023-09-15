@@ -98,7 +98,7 @@
 }
 
 @include media-breakpoint-down(xl) {
-    .implementation .col {
+    .implementation .container {
         padding: 0;
     }
     .implementation__worker-image {
@@ -155,7 +155,7 @@
     .implementation {
         background-image: url("../img/@2x/implementation-bg--320@2x.jpg");
     }
-    .implementation .col {
+    .implementation .container {
         padding-right: calc(var(--bs-gutter-x) * 0.5);
         padding-left: calc(var(--bs-gutter-x) * 0.5);
         margin-top: var(--bs-gutter-y);

@@ -1,0 +1,124 @@
+/* ======= advantages START ======= */
+.advantages {
+    position: relative;
+    background-color: $lightGrey;
+    z-index: -1;
+}
+.advantages__layout {
+    padding: 105px 0 105px 0;
+}
+.advantages__title {
+    margin-bottom: 60px;
+    color: $black;
+    font-family: $InterTight-400;
+    font-size: 45px;
+    letter-spacing: 0;
+    line-height: 1.25;
+}
+.advantages__title--700 {
+    font-family: $InterTight-700;
+}
+.advantages__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+}
+.advantages__list-item {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    flex: 1 0 0%;
+    padding: 10px 10px 10px 10px;
+    max-width: 660px;
+    min-height: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.advantages__list-item-text {
+    text-align: center;
+    color: $black;
+    font-family: $InterTight-400;
+    font-size: 20px;
+    width: 100%;
+    padding: 30px 0 30px 0;
+    background-color: $white;
+    border-radius: 20px;
+    letter-spacing: 0;
+    line-height: 1.25;
+}
+.advantages__list-item-text--700 {
+    font-family: $InterTight-700;
+}
+.advantages__list-item-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* ======= advantages Media START ======= */
+@include media-breakpoint-down(xxl) {
+    .advantages__layout {
+        padding: 85px 0 85px 0;
+    }
+    .advantages__list-item-text {
+        font-size: 18px;
+    }
+}
+
+@include media-breakpoint-down(xl) {
+    .advantages .container {
+        padding: 0;
+    }
+    .advantages__title {
+        margin-bottom: 40px;
+    }
+    .advantages__list-item {
+        flex: 1 0 50%;
+        max-width: 458px;
+    }
+    .advantages__list {
+        gap: 18px;
+    }
+    .advantages__list-item-text {
+        font-size: 20px;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .advantages__list-item {
+        max-width: 300px;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .advantages__title {
+        font-size: 36px;
+    }
+    .advantages__list-item {
+        max-width: 100%;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .advantages .container {
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+        margin-top: var(--bs-gutter-y);
+    }
+    .advantages__layout {
+        padding: 60px 0 60px 0;
+    }
+    .advantages__title {
+        margin-bottom: 30px;
+    }
+}
+/* ======= advantages Media END ======= */
+/* ======= advantages END ======= */

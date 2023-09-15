@@ -1,10 +1,6 @@
 /* ======= services START ======= */
 .services {
   position: relative;
-  // background-image: url("../img/@2x/services-bg--xxl@2x.jpg");
-  // background-size: cover;
-  // background-position: center;
-  // background-repeat: no-repeat;
 }
 
 .services__bg {
@@ -156,9 +152,6 @@
 
 /* ======= services Media START ======= */
 @include media-breakpoint-down(xxl) {
-  .services {
-    // background-image: url("../img/@2x/services-bg--xl@2x.jpg");
-  }
   .services__layout {
     padding: 85px 0 90px 0;
   }
@@ -168,10 +161,7 @@
 }
 
 @include media-breakpoint-down(xl) {
-  .services {
-    // background-image: url("../img/@2x/services-bg--lg@2x.jpg");
-  }
-  .services .col {
+  .services .container {
     padding: 0;
   }
   .services__list {
@@ -189,9 +179,6 @@
 }
 
 @include media-breakpoint-down(lg) {
-  .services {
-    // background-image: url("../img/@2x/services-bg--md@2x.jpg");
-  }
   .services__list-item {
     width: 298px;
     min-height: 355px;
@@ -226,7 +213,7 @@
 }
 
 @include media-breakpoint-down(sm) {
-  .services .col {
+  .services .container {
     padding-right: calc(var(--bs-gutter-x) * 0.5);
     padding-left: calc(var(--bs-gutter-x) * 0.5);
     margin-top: var(--bs-gutter-y);
