@@ -116,7 +116,7 @@
 }
 
 @include media-breakpoint-down(xl) {
-    .container {
+    .for-whom .container {
         padding: 0;
     }
     .for-whom__layout {
@@ -165,7 +165,7 @@
 }
 
 @include media-breakpoint-down(sm) {
-    .container {
+    .for-whom .container {
         padding-right: calc(var(--bs-gutter-x) * 0.5);
         padding-left: calc(var(--bs-gutter-x) * 0.5);
         margin-top: var(--bs-gutter-y);
