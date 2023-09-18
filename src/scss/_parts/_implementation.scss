@@ -9,7 +9,7 @@
 }
 .implementation__layout {
     position: relative;
-    padding: 105px 0 105px ; 
+    padding: 105px 0 105px ;
 }
 .implementation__title {
     max-width: 750px;
@@ -88,6 +88,7 @@
     object-position: 115%;
     pointer-events: none;
     z-index: -1;
+    overflow-x: visible;
 }
 
 /* ======= implementation Media START ======= */
@@ -98,9 +99,6 @@
 }
 
 @include media-breakpoint-down(xl) {
-    .implementation .container {
-        padding: 0;
-    }
     .implementation__worker-image {
         object-position: 185%;
     }
@@ -154,11 +152,6 @@
 @include media-breakpoint-down(sm) {
     .implementation {
         background-image: url("../img/@2x/implementation-bg--320@2x.jpg");
-    }
-    .implementation .container {
-        padding-right: calc(var(--bs-gutter-x) * 0.5);
-        padding-left: calc(var(--bs-gutter-x) * 0.5);
-        margin-top: var(--bs-gutter-y);
     }
     .implementation__layout {
         padding: 60px 0 60px;

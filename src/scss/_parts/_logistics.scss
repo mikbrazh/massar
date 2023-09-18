@@ -1,7 +1,165 @@
 /* ======= logistics START ======= */
+.logistics {
+    background-color: $lightGreyBg;
+}
+.logistics__layout {
+    position: relative;
+    padding: 110px 0 110px 0;
+    background-color: $lightGreyBg;
+    z-index: 0;
+}
+.logistics__text-block {
+    margin-bottom: 67px;
+}
+.logistics__text {
+    margin-bottom: 30px;
+    color: $black;
+    font-family: $InterTight-400;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 1.25;
+    max-width: 635px;
+}
+.logistics__title {
+    margin-bottom: 18px;
+    max-width: 560px;
+    color: $black;
+    font-family: $InterTight-700;
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: 1.15;
+    text-transform: uppercase;
+}
+.logistics__subtitle {
+    color: $blue;
+    font-family: $InterTight-600;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 1.25;
+    margin-bottom: 70px;
+}
+.logistics__bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: 313%;
+    pointer-events: none;
+    z-index: -1;
+    overflow-x: visible;
+    
+}
+.logistics__form {
+    max-width: 100%;
+}
+.logistics__form-input {
+    display: inline-block;
+    margin-right: 20px;
+    max-width: 425px;
+}
+.logistics__form-button {
+    display: inline-block;
+    max-width: 425px;
+}
+.logistics__form-agreement {
+    padding-top: 10px;
+    max-width: 455px;
+    color: $black;
+    font-family: $InterTight-400;
+    font-size: 12px;
+    line-height: 1.25;
+    letter-spacing: 0;
+}
 
+/* ======= logistics Media START ======= */
+@include media-breakpoint-down(xxl) {
+    .logistics__layout {
+        padding: 85px 0 85px 0;
+    }
+    .logistics__text {
+        max-width: 590px;
+    }
+    .logistics__title {
+        margin-bottom: 2px;
+    }
+    .logistics__subtitle {
+        margin-bottom: 60px;
+    }
+    .logistics__bg-image {
+        object-position: 371%;
+    }
+}
 
+@include media-breakpoint-down(xl) {
+    .logistics__layout {
+        padding: 85px 0 0 0;
+    }
+    .logistics__bg-image {
+        position: relative;
+        z-index: 0;
+    }
+    .logistics__text-block {
+        margin-bottom: 60px;
+    }
+    .logistics__text {
+        max-width: 610px;
+    }
+    .logistics__form-agreement {
+        margin-bottom: 60px;
+    }
+}
 
+@include media-breakpoint-down(lg) {
+    .logistics__text-block {
+        margin-bottom: 45px;
+    }
+    .logistics__form-input {
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+    .logistics__form-agreement {
+        margin-bottom: 45px;
+    }
 
+}
 
+@include media-breakpoint-down(md) {
+    .logistics__title {
+        font-size: 30px;
+    }
+    .logistics__form-input {
+        max-width: 100%;
+    }
+    .logistics__form-button {
+        max-width: 100%;
+    }
+    .logistics__form-agreement {
+        max-width: 440px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .logistics__layout {
+        padding: 60px 0 0 0;
+    }
+    .logistics__text {
+        margin-bottom: 20px;
+    }
+    .logistics__text-block {
+        margin-bottom: 30px;
+    }
+    .logistics__subtitle {
+        margin-bottom: 30px;
+    }
+    .logistics__form-button {
+        font-size: 15px;
+    }
+    .logistics__form-agreement {
+        margin-bottom: 30px;
+        font-size: 11px;
+    }
+}
+/* ======= logistics Media END ======= */
 /* ======= logistics END ======= */

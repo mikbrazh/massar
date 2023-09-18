@@ -67,10 +67,6 @@
 }
 
 @include media-breakpoint-down(xl) {
-  .solution .container {
-    padding: 0;
-  }
-
   .solution__layout {
     padding: 90px 0 90px 25px;
   }
@@ -95,12 +91,6 @@
 }
 
 @include media-breakpoint-down(sm) {
-  .solution .container {
-    padding-right: calc(var(--bs-gutter-x) * 0.5);
-    padding-left: calc(var(--bs-gutter-x) * 0.5);
-    margin-top: var(--bs-gutter-y);
-  }
-
   .solution__layout {
     padding: 60px 15px 70px;
   }

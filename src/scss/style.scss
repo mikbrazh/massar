@@ -217,6 +217,7 @@ body {
   color: $white;
   transition: color $button;
   letter-spacing: 0;
+  cursor: pointer;
   &:hover {
     background-color: $darkRed;
   }
@@ -237,6 +238,19 @@ body {
   }
 }
 
+@include media-breakpoint-down(xl) {
+  .container {
+    padding: 0;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .container {
+      padding-right: calc(var(--bs-gutter-x) * 0.5);
+      padding-left: calc(var(--bs-gutter-x) * 0.5);
+      margin-top: var(--bs-gutter-y);
+  }
+}
 /* ======= Общий CSS END ======= */
 
 /* ======= Кастомный CSS START ======= */
@@ -252,6 +266,8 @@ body {
 @import "_parts/_advantages";
 @import "_parts/_stages";
 @import "_parts/_logistics";
+@import "_parts/_about";
+@import "_parts/_partners";
 // @import "_parts/_sections/_name-section";
 
 // Общие Media

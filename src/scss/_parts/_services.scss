@@ -161,9 +161,6 @@
 }
 
 @include media-breakpoint-down(xl) {
-  .services .container {
-    padding: 0;
-  }
   .services__list {
     gap: 20px;
   }
@@ -213,11 +210,6 @@
 }
 
 @include media-breakpoint-down(sm) {
-  .services .container {
-    padding-right: calc(var(--bs-gutter-x) * 0.5);
-    padding-left: calc(var(--bs-gutter-x) * 0.5);
-    margin-top: var(--bs-gutter-y);
-  }
   .services__list-item-link {
     padding: 110px 14px 20px 14px;
   }

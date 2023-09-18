@@ -50,9 +50,6 @@
 }
 
 @include media-breakpoint-down(xl) {
-    .convinced .container {
-        padding: 0;
-    }
     .convinced__layout {
         padding: 90px 0 90px 0;
     }
@@ -92,11 +89,6 @@
 }
 
 @include media-breakpoint-down(sm) {
-    .convinced .container {
-      padding-right: calc(var(--bs-gutter-x) * 0.5);
-      padding-left: calc(var(--bs-gutter-x) * 0.5);
-      margin-top: var(--bs-gutter-y);
-    }
     .convinced__layout {
         padding: 60px 0 60px 0;
     }

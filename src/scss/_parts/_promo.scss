@@ -139,10 +139,6 @@
 
 /* ======= promo Media START ======= */
 @include media-breakpoint-down(xl) {
-    .promo .container {
-      padding: 0;
-    }
-
     .promo__layout {
         padding-bottom: 110px;
     }
@@ -229,12 +225,6 @@
 }
 
 @include media-breakpoint-down(sm) {
-    .promo .container {
-        padding-right: calc(var(--bs-gutter-x) * 0.5);
-        padding-left: calc(var(--bs-gutter-x) * 0.5);
-        margin-top: var(--bs-gutter-y);
-    }
-
     .promo__layout {
         padding-top: 150px;
         padding-bottom: 60px;

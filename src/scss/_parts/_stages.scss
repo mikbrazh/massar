@@ -96,9 +96,6 @@
 }
 
 @include media-breakpoint-down(xl) {
-  .stages .container {
-    padding: 0;
-  }
   .stages__list-item-right-block-text {
     font-size: 24px;
   }
@@ -133,11 +130,6 @@
 }
 
 @include media-breakpoint-down(sm) {
-      .stages .container {
-          padding-right: calc(var(--bs-gutter-x) * 0.5);
-          padding-left: calc(var(--bs-gutter-x) * 0.5);
-          margin-top: var(--bs-gutter-y);
-      }
       .stages__list-item {
         flex: auto;
       }

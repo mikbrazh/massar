@@ -310,18 +310,7 @@
 /* ======= header END ======= */
 
 /* ======= Header Media START ======= */
-@include media-breakpoint-down(xl) {
-    .header__top .container, .header__bottom .container {
-      padding: 0;
-    }
-}
-
 @include media-breakpoint-down(sm) {
-    .header__top .container, .header__bottom .container {
-        padding-right: calc(var(--bs-gutter-x) * 0.5);
-        padding-left: calc(var(--bs-gutter-x) * 0.5);
-        margin-top: var(--bs-gutter-y);
-    }
     .header__logo-link {
         margin-right: 0;
     }
