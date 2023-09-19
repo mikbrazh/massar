@@ -1,6 +1,119 @@
 /* ======= partners START ======= */
+.partners {
+    background-color: $lightGrey;
+}
+.partners__layout {
+    padding: 105px 0 105px 0;
+}
+.partners__title {
+    max-width: 760px;
+    margin-bottom: 60px;
+    color: $black;
+    font-family: $InterTight-400;
+    font-size: 45px;
+    letter-spacing: 0;
+    line-height: 1.25;
+}
+.partners__title--700 {
+    font-family: $InterTight-700;
+}
+.partners__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+}
+.partners__list-item {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 217px;
+    position: relative;
+    flex: 1 0 31%;
+    max-height: 214px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.partners__list-item-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+    z-index: 0;
+    overflow-x: visible;
+}
+.partners__list-item-text-block {
+    position: relative;
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7px 0 13px;
+    background-color: $white;
+    z-index: 1;
+    border-radius: 14px;
 
+}
+.partners__list-item-text {
+    color: $black;
+    font-family: $InterTight-400;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 1.25;
+}
+.partners__list-item-logo {
+    display: inline-block;
+}
 
+/* ======= partners Media START ======= */
+@include media-breakpoint-down(xxl) {
+    .partners__layout {
+        padding: 85px 0 85px 0;
+    }
+}
 
+@include media-breakpoint-down(xl) {
+    .partners__title {
+        margin-bottom: 45px;
+    }
+    .partners__list-item-text-block {
+        width: 400px;
+    }
+    .partners__list-item-text {
+        font-size: 13px;
+    }
+    .partners__list-item {
+        flex: 1 0 48%;
+    }
+}
 
+@include media-breakpoint-down(lg) {
+    .partners__list-item {
+        flex: 1 0 100%;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .partners__title {
+        margin-bottom: 30px;
+        font-size: 36px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .partners__layout {
+        padding: 60px 0 60px 0;
+    }
+
+}
+/* ======= partners Media END ======= */
 /* ======= partners END ======= */
