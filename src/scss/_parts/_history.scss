@@ -49,11 +49,20 @@
 }
 .history__company-about-link {
     position: relative;
+    padding-bottom: 1px;
     color: $blue;
     font-family: $InterTight-700;
     font-size: 18px;
     letter-spacing: 0;
     line-height: 1.25;
+    transition: $button;
+    &:hover {
+      color: $blue;
+      border-bottom: 1px solid $blue;
+    }
+    &:active {
+      color: $purple;
+    }
     &:after {
         content: "";
         position: absolute;
@@ -137,7 +146,6 @@
     letter-spacing: 0;
     line-height: 1.25;
 }
-/* ======= history END ======= */
 
 /* ======= history Media START ======= */
 @include media-breakpoint-down(xxl) {
@@ -153,18 +161,97 @@
 }
 
 @include media-breakpoint-down(xl) {
-
+    .history__company-logo {
+        margin-bottom: 30px; 
+    }
+    .history__company-block {
+        padding-right: 75px;
+    }
+    .history__history-block {
+        padding-left: 0;
+    }
+    .history__company-block {
+    flex: 1 0 44%;
+    }
+    .history__history-list-item {
+        margin-bottom: 20px;
+        line-height: 1.55;
+    }
+    .history__params-list-item {
+        padding: 30px 15px 30px 15px;
+    }
+    .history__params-desc-list-term {
+        font-size: 40px;
+    }
 }
 
 @include media-breakpoint-down(lg) {
-
+    .history__company-block {
+        flex: 1 0 100%;
+    }
+    .history__history-block {
+        padding-left: 42px;
+        flex: 1 0 100%;
+    }
+    .history__company-desc {
+        max-width: 100%;
+    }
+    .history__company-block {
+        padding-right: 0;
+    }
+    .history__company-desc {
+        margin-bottom: 13px;
+        font-size: 23px;
+    }
+    .history__company-block {
+        margin-bottom: 40px;
+    }
+    .history__top-block {
+        margin-bottom: 45px;
+    }
+    .history__params-list-item {
+        padding: 30px 30px 30px 30px;
+        flex: 1 0 100%;
+    }
+    .history__params-desc-list-term {
+        font-size: 45px;
+    }
 }
 
 @include media-breakpoint-down(md) {
-
+    .history__company-name {
+        font-size: 30px;
+    }
+    .history__company-desc {
+        font-size: 24px;
+    }
 }
 
 @include media-breakpoint-down(sm) {
-
+    .history__layout {
+        padding: 60px 0 60px 0;
+    }
+    .history__company-desc {
+        font-size: 17px;
+    }
+    .history__company-block {
+        margin-bottom: 30px;
+    }
+    .history__history-list-item {
+        font-size: 17px;
+    }
+    .history__history-block {
+        padding-left: 38px;
+    }
+    .history__history-list-item::before {
+            left: -38px;
+    }
+    .history__top-block {
+        margin-bottom: 30px;
+    }
+    .history__params-list {
+        gap: 20px;
+    }
 }
 /* ======= history Media END ======= */
+/* ======= history END ======= */
