@@ -1,10 +1,18 @@
-/* ======= footer START ======= */
+/* ======= map START ======= */
+
+
+
+body {
+    background-color: rebeccapurple;
+}
 
 
 
 
 
-/* ======= footer Media START ======= */
+
+
+/* ======= map Media START ======= */
 @include media-breakpoint-down(xxl) {
 
 }
@@ -24,9 +32,5 @@
 @include media-breakpoint-down(sm) {
 
 }
-
-@include media-breakpoint-down(xs) {
-
-}
-/* ======= footer Media END ======= */
-/* ======= footer END ======= */
+/* ======= map Media END ======= */
+/* ======= map END ======= */

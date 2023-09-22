@@ -6,16 +6,16 @@
     <div class="optimize__layout">
 
       <div class="optimize__content-block">
-        <h2 class="optimize__title"><span class="optimize__title--700">Оптимизируйте</span> ресурсы<br class="d-inline"> вашего производства уже сейчас</h2>
+        <h2 class="optimize__title"><span class="optimize__title--700">Оптимизируйте</span> ресурсы<br class="d-none d-sm-inline"> вашего производства<br class="d-inline d-xl-none"> уже сейчас</h2>
         <ul class="optimize-list">
           <li class="optimize__list-item">Оставьте ваш номер телефона<br class="d-inline"> и наш эксперт перезвонит вам уже сегодня</li>
-          <li class="optimize__list-item">Подберет варианты исходя от вашего бюджета</li>
+          <li class="optimize__list-item">Подберет варианты исходя<br class="d-inline d-sm-none"> от вашего бюджета</li>
           <li class="optimize__list-item">Подскажет на чем можно сэкономить до 40%</li>
         </ul>
         <form class="optimize__form" action="#" method="post">
           <label class="optimize__form-label" for="optimize__form-input">Введите ваш номер телефона:</label>
           <input id="optimize__form-input" class="optimize__form-input input-default" name="optimize__form-input" type="tel" placeholder="+7 (999) 999-99-99">
-          <button class="optimize__form-button button-default">Получить<br class="d-inline d-sm-none"> бесплатную консультацию</button>
+          <button class="optimize__form-button button-default">Получить бесплатную консультацию специалиста</button>
           <p class="optimize__form-agreement">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a class="optimize__form-agreement-link agreement-link-default" href="#">Пользовательским соглашением</a></p>
         </form>
       </div>
@@ -29,15 +29,14 @@
           </dl>
         </div>
 
-        <picture>
-          <source srcset="img/@2x/optimize-worker-image--320@2x.png" media="(max-width: 320px)">
-          <img class="optimize__image img-responsive img-responsive--width-100" src="img/@2x/optimize-worker-image--1366@2x.png" alt="Рабочий" width="1263" height="842">
-        </picture>
+          <img class="optimize__image d-none d-sm-block" src="img/@2x/optimize-worker-image--1366@2x.png" alt="Рабочий" width="1263" height="842">
       </div>
       
     </div>
 
   </div>
 
+
+  <img class="optimize__image d-block d-sm-none" src="img/@2x/optimize-worker-image--1366@2x.png" alt="Рабочий" width="1263" height="842">
 </section>
 <!-- ======= optimize END ======= -->
