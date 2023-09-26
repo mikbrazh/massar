@@ -1,4 +1,8 @@
 /* ======= results START ======= */
+.results {
+    margin-bottom: 85px;
+}
+
 .results__layout {
     position: relative;
     padding: 85px 0 85px 90px;
@@ -119,6 +123,9 @@
 }
 
 @include media-breakpoint-down(sm) {
+    .results {
+        margin-bottom: 60px;
+    }
     .results__layout {
         padding: 60px 0 0 0;
     }

@@ -3,7 +3,7 @@
     padding: 105px 0 105px 0;
 }
 .contacts__title {
-    padding-bottom: 60px;
+    margin-bottom: 60px;
     color: $black;
     font-family: $InterTight-400;
     font-size: 45px;
@@ -204,15 +204,69 @@
 }
 
 @include media-breakpoint-down(lg) {
-
+    .contacts__title {
+        margin-bottom: 45px;
+    }
+    .contacts__content {
+        flex-wrap: wrap;
+    }
+    .contacts__contacts-block {
+        margin-bottom: 45px;
+        gap: 35px;
+    }
+    
+    .contacts__company-address {
+        max-width: 100%;
+        margin-bottom: 45px;
+    }
+    .contacts__company-block {
+        margin-bottom: 40px;
+    }
+    .contacts__destination-block {
+        flex-wrap: wrap;
+    }
+    .contacts__photo-block {
+        gap: 0;
+        margin-bottom: 20px;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .contacts__photo-image {
+        width: 300px;
+    }
+    .contacts__address-block {
+        width: 100%;
+    }
+    .contacts__map-block {
+        width: 100%;
+        height: 290px;
+    }
 }
 
 @include media-breakpoint-down(md) {
-
+    .contacts__photo-image {
+        width: 220px;
+    }
 }
 
 @include media-breakpoint-down(sm) {
-
+    .contacts__layout {
+        padding: 60px 0 60px 0;
+    }
+    .contacts__title {
+        font-size: 36px;
+    }
+    .contacts__company-name-block {
+        max-width: 240px;
+    }
+    .contacts__photo-block {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .contacts__photo-image {
+        width: 100%;
+    }
 }
 /* ======= contacts Media END ======= */
 /* ======= contacts END ======= */
