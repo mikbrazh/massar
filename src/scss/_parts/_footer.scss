@@ -1,6 +1,6 @@
 /* ======= footer START ======= */
 .footer {
-  padding: 40px 0 105px 0;
+  padding: 40px 0 100px 0;
   background-color: $black;
 }
 .footer__top-block-layout {
@@ -99,13 +99,78 @@
   letter-spacing: 0;
 }
 .footer__bottom-block-layout {
-  padding-bottom: 45px;
-}
-.footer__bottom-block {
+  padding-top: 45px;
 }
 .footer__nav-menu {
+    display: grid;
+    grid-template-areas:
+        "pneumatic-mail services projects"
+        "about farm-logistics projects"
+        "blog farm-logistics projects";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: min-content min-content 1fr;
+    column-count: auto;
 }
-
+.footer__nav-menu-item {
+  margin-bottom: 45px;
+}
+.footer__nav-menu-item-title {
+  margin-bottom: 10px;
+}
+.footer__nav-menu-item-title-link {
+  color: $white;
+  font-family: $InterTight-700;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 1.25;
+  text-transform: uppercase;
+  transition: $button;
+  &:hover {
+    color: $white;
+  }
+}
+.footer__nav-menu-item-list-item {
+    line-height: 1;
+    margin-bottom: 6px;
+    break-inside: avoid;
+    &:last-child {
+      margin-bottom: 0;
+    }
+}
+.footer__nav-menu-item-list-item-link {
+  display: inline-block;
+  color: $white;
+  font-family: $InterTight-400;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: inherit;
+  transition: $button;
+  &:hover {
+    color: $white;
+  }
+}
+.footer__nav-menu-item--pneumatic-mail {
+  grid-area: pneumatic-mail;
+}
+.footer__nav-menu-item--about {
+  grid-area: about;
+}
+.footer__nav-menu-item--blog {
+  grid-area: blog;
+}
+.footer__nav-menu-item--services {
+  grid-area: services;
+}
+.footer__nav-menu-item--farm-logistics {
+  grid-area: farm-logistics;
+}
+.footer__nav-menu-item--projects {
+  grid-area: projects;
+}
+.footer__nav-menu-item--blog, .footer__nav-menu-item--farm-logistics {
+  margin-top: -45px;
+  margin-bottom: 0;
+}
 /* ======= footer Media START ======= */
 @include media-breakpoint-down(xxl) {
   .footer {
@@ -114,12 +179,17 @@
 }
 
 @include media-breakpoint-down(xl) {
-  
+  .footer {
+    padding: 45px 0 65px 0;
+  }
+  .footer__nav-menu-item-list-item {
+    line-height: 1.25;
+  }
 }
 
 @include media-breakpoint-down(lg) {
   .footer {
-    padding: 40px 0 85px 0;
+    padding: 40px 0 45px 0;
   }
   .footer__top-block {
     flex-direction: column;
@@ -146,10 +216,66 @@
   .footer__contacts-text:before {
     left: -14px;
   }
+  .footer__nav-menu {
+    grid-template-areas:
+        "pneumatic-mail farm-logistics"
+        "about projects"
+        "blog projects"
+        "services projects";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0 20px;
+  }
+  .footer__nav-menu-item--blog {
+    margin-top: -125px;
+  }
+  .footer__nav-menu-item--farm-logistics {
+    margin-top: 0;
+  }
+  .footer__nav-menu-item--projects {
+    margin-top: -65px;
+  }
+  .footer__nav-menu-item--services {
+    margin-top: -60px;
+  }
 }
 
 @include media-breakpoint-down(md) {
-
+  .footer {
+    padding: 40px 0 85px 0;
+  }
+  .footer__nav-menu {
+    grid-template-areas:
+        "pneumatic-mail"
+        "about"
+        "blog"
+        "services"
+        "farm-logistics"
+        "projects";
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+  }
+  .footer__nav-menu-item--blog {
+    margin-top: 0;
+  }
+  .footer__nav-menu-item--farm-logistics {
+    margin-top: 0;
+  }
+  .footer__nav-menu-item--projects {
+    margin-top: 0;
+  }
+  .footer__nav-menu-item--services {
+    margin-top: 0;
+  }
+  .footer__nav-menu-item {
+    margin-bottom: 45px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .footer__nav-menu-item--about {
+    margin-bottom: 0;
+  }
 }
 
 @include media-breakpoint-down(sm) {
