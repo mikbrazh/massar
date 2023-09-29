@@ -102,9 +102,9 @@
 .header__dropdown-button::after {
     content: "";
     position: absolute;
-    width: 14px;
-    height: 14px;
-    top: 47%;
+    width: 12px;
+    height: 12px;
+    top: 50%;
     right: 10px;
     transform: translateY(-50%);
 
@@ -180,12 +180,11 @@
     display: none;
 }
 
-.header__dropdown-flag-img {
+.header__dropdown-flag-icon {
     margin-left: 1px;
     width: 20px;
-    height: 14px;
-    // width: 17px;
-    // height: 12px;
+    height: auto;
+    pointer-events: none;
 }
 /* ======= Header dropdown END ======= */
 

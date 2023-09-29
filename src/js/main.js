@@ -81,26 +81,40 @@ if ( document.querySelector('.header') ) {
 }
 /* ======= Header END ======= */
 
-/* ======= footer START ======= */
-// if ( document.querySelector('.footer') ) {
+/* ======= modal START ======= */
+if ( document.querySelector('.modal') ) {
 
-// 	Добавление отрицательного margin. ПРИ ПОСАДКИ ПЕРЕДЕЛАТЬ НА БЭКЕНД	
-// 	const footerNavMenuItemFarmLogistics = document.querySelector('.footer__nav-menu-item--farm-logistics');
-// 	const footerNavMenuItemBlog = document.querySelector('.footer__nav-menu-item--blog');
-// 	const footerNavMenuItemProjects = document.querySelector('.footer__nav-menu-item--projects');
-	
-// 	if (window.innerWidth >= 960) {
-// 		footerNavMenuItemFarmLogistics.classList.add('footer__nav-menu-item--negative-margin');
-// 		footerNavMenuItemBlog.classList.add('footer__nav-menu-item--negative-margin');
-// 		footerNavMenuItemProjects.classList.remove('footer__nav-menu-item--negative-margin');
-// 	} else if (window.innerWidth < 960) {
-// 		footerNavMenuItemFarmLogistics.classList.remove('footer__nav-menu-item--negative-margin');
-// 		footerNavMenuItemBlog.classList.remove('footer__nav-menu-item--negative-margin');
-// 		footerNavMenuItemProjects.classList.add('footer__nav-menu-item--negative-margin');
-// 	}
-	
-// }
-/* ======= footer END ======= */
+	const html = document.querySelector('html');
+	const body = document.querySelector('body');
 
+	const modals = document.querySelectorAll('[data-modal]');
+
+	modals.forEach(function (trigger) {
+	  trigger.addEventListener('click', function (event) {
+		event.preventDefault();
+		const modal = document.getElementById(trigger.dataset.modal);
+
+		// Убираем скролл с документа
+		body.classList.add('is-static');
+		html.classList.add('is-static');
+
+		modal.classList.add('modal--open');
+		const exits = modal.querySelectorAll('.modal-exit');
+		exits.forEach(function (exit) {
+		  exit.addEventListener('click', function (event) {
+			event.preventDefault();
+
+			// Возвращаем скролл
+			body.classList.remove('is-static');
+			html.classList.remove('is-static');
+
+			modal.classList.remove('modal--open');
+		  });
+		});
+	  });
+	});
+
+}
+/* ======= modal END ======= */
 /* ======= Main JS END ======= */
 })();
