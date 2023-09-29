@@ -189,7 +189,10 @@ body {
 }
 
 .is-hidden {
-  display: none
+  width: 0;
+  visibility: hidden;
+  opacity: 0;
+  transform: rotateX(-90deg);
 }
 
 .is-static {
@@ -284,6 +287,7 @@ body {
 @import "_parts/_footer";
 
 @import "_parts/_modal";
+@import "_parts/_preloader";
 
 // Общие Media
 // @import "media"; // Всегда в конце
