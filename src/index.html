@@ -35,6 +35,11 @@
 
 <body>
   <!-- ======= HTML START ======= -->
+
+  <!-- ======= before header START ======= -->
+  @@include('./preloader.html')
+  <!-- ======= before header END ======= -->
+
   @@include('./header.html')
   <main class="main">
     @@include('./promo.html')
@@ -50,17 +55,17 @@
     @@include('./logistics.html')
     @@include('./about.html')
     @@include('./partners.html')
-    .@@include('./history.html')
+    @@include('./history.html')
     @@include('./results.html')
     @@include('./optimize.html')
     @@include('./contacts.html')
     @@include('./footer.html')
   </main>
   
-  <!-- ======= То, что в футере START ======= -->
-  <!-- @@include('./modal.html') -->
-  <!-- @@include('./preloader.html') -->
-  <!-- ======= То, что в футере END ======= -->
+  <!-- ======= after footer START ======= -->
+  @@include('./modal.html')
+  <!-- ======= after footer END ======= -->
+
   <!-- ======= HTML END ======= -->
 
   <!-- ======= SVG sprites START ======= -->
@@ -86,11 +91,12 @@
     </symbol>
   </svg> -->
   <!-- ======= SVG sprites END ======= -->
-
+  
   <!-- ======= JS START ======= -->
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
   <!-- ======= JS END ======= -->
+  
 </body>
 
 </html>

@@ -35,6 +35,15 @@
 
 <body>
   <!-- ======= HTML START ======= -->
+
+  <!-- ======= before header START ======= -->
+  	<!-- preloader START -->
+	<div id="preloader">
+		<span class="loader"></span>
+	</div>
+	<!-- preloader END -->
+  <!-- ======= before header END ======= -->
+
   <!-- ======= header START ======= -->
 <header class="header">
 
@@ -72,7 +81,7 @@
                 <div class="header__phone d-none d-lg-block">
                     <div class="header__phone-text">Звоните, мы в офисе</div>
                     <a href="tel:+78124413056" class="header__phone-number">+7 (812) 441-30-56</a>
-                    <a href="#" class="header__phone-recall-button">Перезвоните мне</a>
+                    <a data-modal="modal-order" href="#" class="header__phone-recall-button">Перезвоните мне</a>
                 </div>
                 <div class="header__hamburger d-block d-lg-none">
                     <svg class="header__hamburger-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -104,21 +113,83 @@
                     <ul class="header__nav-list">
                         <li class="header__nav-item">
                             <a href="#" class="header__nav-link">Пневмопочта</a>
+                            <ul class="header__subnav-list">
+                              <li class="header__subnav-list-item">
+                                <a class="header__subnav-list-link" href="#">Пневмопочта для банков</a>
+                              </li>
+                              <li class="header__subnav-list-item">
+                                <a class="header__subnav-list-link" href="#">Пневмопочта для магазинов</a>
+                              </li>
+                              <li class="header__subnav-list-item">
+                                <a class="header__subnav-list-link" href="#">Пневмопочта для медицинских учреждений</a>
+                              </li>
+                              <li class="header__subnav-list-item">
+                                <a class="header__subnav-list-link" href="#">Пневмопочта для железных дорог</a>
+                              </li>
+                              <li class="header__subnav-list-item">
+                                <a class="header__subnav-list-link" href="#">Пневмопочта в аэропортах</a>
+                              </li>
+                              <li class="header__subnav-list-item">
+                                <a class="header__subnav-list-link" href="#">Пневмопочта для промышленности</a>
+                              </li>
+                              <li class="header__subnav-list-item">
+                                <a class="header__subnav-list-link" href="#">Виды систем пневмопочты</a>
+                              </li>
+                            </ul>
                         </li>
                         <li class="header__nav-item">
                             <a href="#" class="header__nav-link">Фармацевтическая логистика</a>
+                            <ul class="header__subnav-list">
+                              <li class="header__subnav-list-item">
+                                <a class="header__subnav-list-link" href="#">BoxPicker</a>
+                              </li>
+                              <li class="header__subnav-list-item">
+                                <a class="header__subnav-list-link" href="#">PillPick</a>
+                              </li>
+                            </ul>
                         </li>
                         <li class="header__nav-item">
                             <a href="#" class="header__nav-link">Автоматизация хранения</a>
                         </li>
                         <li class="header__nav-item">
                             <a href="#" class="header__nav-link">Услуги</a>
+                            <ul class="header__subnav-list">
+                              <li class="header__subnav-list-item">
+                                <a class="header__subnav-list-link" href="#">Поставка и монтаж</a>
+                              </li>
+                              <li class="header__subnav-list-item">
+                                <a class="header__subnav-list-link" href="#">Запчасти для пневмопочты</a>
+                              </li>
+                              <li class="header__subnav-list-item">
+                                <a class="header__subnav-list-link" href="#">Проектирование</a>
+                              </li>
+                            </ul>
                         </li>
                         <li class="header__nav-item">
                             <a href="#" class="header__nav-link">О компании</a>
                         </li>
                         <li class="header__nav-item">
                             <a href="#" class="header__nav-link">Проекты</a>
+                            <ul class="header__subnav-list">
+                              <li class="header__subnav-list-item">
+                                <a class="header__subnav-list-link" href="#">Проект в клинике ФГБУ имени&nbspА.М.&nbspНикифорова МЧС России</a>
+                              </li>
+                              <li class="header__subnav-list-item">
+                                <a class="header__subnav-list-link" href="#">Проект в clinics & hospitals GMS</a>
+                              </li>
+                              <li class="header__subnav-list-item">
+                                <a class="header__subnav-list-link" href="#">Проект в клинике Скандинавия</a>
+                              </li>
+                              <li class="header__subnav-list-item">
+                                <a class="header__subnav-list-link" href="#">Проект в ОАО Монди Сыктывкарский ЛПК</a>
+                              </li>
+                              <li class="header__subnav-list-item">
+                                <a class="header__subnav-list-link" href="#">Проект в медицинском центре им.&nbspВ.А.&nbspАлмазова</a>
+                              </li>
+                              <li class="header__subnav-list-item">
+                                <a class="header__subnav-list-link" href="#">Проект в аэропорту Шереметьево</a>
+                              </li>
+                            </ul>
                         </li>
                         <li class="header__nav-item">
                             <a href="#" class="header__nav-link">Дилеры</a>
@@ -974,7 +1045,7 @@
 
 </section>
 <!-- ======= partners END ======= -->
-    .<!-- ======= history START ======= -->
+    <!-- ======= history START ======= -->
 <section class="history">
 
   <div class="container">
@@ -1359,7 +1430,12 @@
 
     </div>
 
-    <!-- ======= modal START ======= -->
+</footer>
+<!-- ======= footer END ======= -->
+  </main>
+  
+  <!-- ======= after footer START ======= -->
+  <!-- ======= modal START ======= -->
 <div class="modal modal-order" id="modal-order">
     <div class="container">
         <div class="modal-order__layout">
@@ -1375,20 +1451,8 @@
     <div class="modal-order__bg modal-exit"></div>
 </div>
 <!-- ======= modal END ======= -->
-    	<!-- preloader START -->
-	<div id="preloader">
-		<span class="loader"></span>
-	</div>
-	<!-- preloader END -->
+  <!-- ======= after footer END ======= -->
 
-</footer>
-<!-- ======= footer END ======= -->
-  </main>
-  
-  <!-- ======= То, что в футере START ======= -->
-  
-  
-  <!-- ======= То, что в футере END ======= -->
   <!-- ======= HTML END ======= -->
 
   <!-- ======= SVG sprites START ======= -->
@@ -1414,11 +1478,12 @@
     </symbol>
   </svg> -->
   <!-- ======= SVG sprites END ======= -->
-
+  
   <!-- ======= JS START ======= -->
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
   <!-- ======= JS END ======= -->
+  
 </body>
 
 </html>
