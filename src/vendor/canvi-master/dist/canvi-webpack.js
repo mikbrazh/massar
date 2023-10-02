@@ -1,4 +1,3 @@
-/* ======= Canvi nav menu START ======= */
 class Canvi {
     constructor(options = {})
     {
@@ -293,4 +292,4 @@ class Canvi {
         console.groupEnd();
     }
 }
-/* ======= Canvi nav menu END ======= */
+export default Canvi;

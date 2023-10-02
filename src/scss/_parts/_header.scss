@@ -319,8 +319,8 @@
   position: absolute;
   top: 20px;
   left: 0;
-  padding: 30px;
-  width: 330px;
+  padding: 28px;
+  width: 326px;
   background-color: $white;
   border-radius: 0 0 8px 8px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -356,13 +356,13 @@
 /* ======= Header Media START ======= */
 @include media-breakpoint-down(xxl) {
   .header__subnav-list {
-    width: 287px;
+    width: 283px;
   }
 }
 
 @include media-breakpoint-down(xl) {
   .header__subnav-list {
-    width: 228px;
+    width: 224px;
   }
 }
 

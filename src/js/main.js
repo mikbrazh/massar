@@ -130,5 +130,24 @@ let hidePreloader = function() {
   
   document.addEventListener('DOMContentLoaded', hidePreloader());
 /* ======= preloader END ======= */
+
+/* ======= Canvi mobile navbar START ======= */
+var canviMobileNavbar = new Canvi({
+    content: '.canvi-content',
+    navbar: '.canvi-navbar',
+    openButton: '.canvi-open-button',
+	position: 'left',
+	pushContent: false,
+	width: '83%',
+});
+
+const canviNavbarMenuDropdownLink = document.querySelector('.canvi-navbar__menu-dropdown-link');
+
+canviNavbarMenuDropdownLink.addEventListener('click', function (event) {
+	canviNavbarMenuDropdownLink.classList.toggle('canvi-navbar__menu-dropdown-link--is-active');
+});
+
+
+/* ======= Canvi mobile navbar END ======= */
 /* ======= Main JS END ======= */
 })();
