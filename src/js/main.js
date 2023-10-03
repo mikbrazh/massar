@@ -138,7 +138,16 @@ var canviMobileNavbar = new Canvi({
     openButton: '.canvi-open-button',
 	position: 'left',
 	pushContent: false,
-	width: '83%',
+	responsiveWidths: [ {
+		breakpoint: "340px",
+		width: "83%"
+	}, {
+		breakpoint: "480px",
+		width: "68%"
+	}, {
+		breakpoint: "640px",
+		width: "60%"
+	}, ]
 });
 
 const canviNavbarMenuDropdownLink = document.querySelector('.canvi-navbar__menu-dropdown-link');
