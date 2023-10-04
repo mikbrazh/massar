@@ -153,7 +153,8 @@ var canviMobileNavbar = new Canvi({
 
 const headerHamburgerButton = document.querySelector('.header__hamburger-button');
 headerHamburgerButton.addEventListener('click', function (event) {
-	canviNavbarMenuDropdownLink.classList.toggle('canvi-navbar__menu-dropdown-link--is-active');
+	html.classList.add('is-static');
+	body.classList.add('is-static');
 });
 
 
@@ -164,6 +165,8 @@ canviNavbarMenuDropdownLink.addEventListener('click', function (event) {
 
 const canviNavbarCloseButton = document.querySelector('.canvi-navbar__close-button');
 canviNavbarCloseButton.addEventListener('click', function (event) {
+  html.classList.remove('is-static');
+	body.classList.remove('is-static');
 	canviMobileNavbar.close();
 });
 /* ======= Canvi mobile navbar END ======= */
