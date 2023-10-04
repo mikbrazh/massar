@@ -1,6 +1,8 @@
 /* ======= canvi-mobile-navbar START ======= */
+// .canvi-navbar[data-position=left] {
+//     transform: translate3d(calc(-100% - 46px), 0, 0);
+// }
 .canvi-content {
-    // margin-top: -46px;
     z-index: 0;
 }
 .canvi-overlay {
@@ -10,36 +12,27 @@
 }
 .canvi-navbar {
     overflow: visible;
+    border-right: 60px solid rgba(255, 255, 255, 0);
+    background-clip: padding-box;
+}
+.canvi-navbar__close-button-cross {
+    fill: $blue;
+    transition: fill $button;
 }
 .canvi-navbar__close-button {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
     position: absolute;
     top: 22px;
-    right: -46px;
+    right: -48px;
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background-color: $white;
+    background-color: red;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    &:before, &:after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        height: 25px;
-        width: 3px;
-        background-color: $blue;
-      }
-    &:before {
-    transform: rotate(45deg);
-    }
-    &:after {
-    transform: rotate(-45deg);
+    z-index: 1;
+    &:hover .canvi-navbar__close-button-cross {
+        fill: $red;
     }
 }
 .canvi-navbar__layout {

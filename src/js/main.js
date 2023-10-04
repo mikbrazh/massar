@@ -1,5 +1,9 @@
 (function() {
 /* ======= Main JS START ======= */
+// Globals
+const html = document.querySelector('html');
+const body = document.querySelector('body');
+
 /* ======= Header START ======= */
 if ( document.querySelector('.header') ) {
 
@@ -84,9 +88,6 @@ if ( document.querySelector('.header') ) {
 /* ======= modal START ======= */
 if ( document.querySelector('.modal') ) {
 
-	const html = document.querySelector('html');
-	const body = document.querySelector('body');
-
 	const modals = document.querySelectorAll('[data-modal]');
 
 	modals.forEach(function (trigger) {
@@ -140,23 +141,31 @@ var canviMobileNavbar = new Canvi({
 	pushContent: false,
 	responsiveWidths: [ {
 		breakpoint: "340px",
-		width: "83%"
+		width: "100%"
 	}, {
 		breakpoint: "480px",
-		width: "68%"
+		width: "100%"
 	}, {
 		breakpoint: "640px",
-		width: "60%"
+		width: "100%"
 	}, ]
 });
 
-const canviNavbarMenuDropdownLink = document.querySelector('.canvi-navbar__menu-dropdown-link');
-
-canviNavbarMenuDropdownLink.addEventListener('click', function (event) {
+const headerHamburgerButton = document.querySelector('.header__hamburger-button');
+headerHamburgerButton.addEventListener('click', function (event) {
 	canviNavbarMenuDropdownLink.classList.toggle('canvi-navbar__menu-dropdown-link--is-active');
 });
 
 
+const canviNavbarMenuDropdownLink = document.querySelector('.canvi-navbar__menu-dropdown-link');
+canviNavbarMenuDropdownLink.addEventListener('click', function (event) {
+	canviNavbarMenuDropdownLink.classList.toggle('canvi-navbar__menu-dropdown-link--is-active');
+});
+
+const canviNavbarCloseButton = document.querySelector('.canvi-navbar__close-button');
+canviNavbarCloseButton.addEventListener('click', function (event) {
+	canviMobileNavbar.close();
+});
 /* ======= Canvi mobile navbar END ======= */
 /* ======= Main JS END ======= */
 })();
