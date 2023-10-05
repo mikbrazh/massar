@@ -139,16 +139,11 @@ var canviMobileNavbar = new Canvi({
     openButton: '.canvi-open-button',
 	position: 'left',
 	pushContent: false,
-	responsiveWidths: [ {
-		breakpoint: "340px",
-		width: "100%"
-	}, {
-		breakpoint: "480px",
-		width: "100%"
-	}, {
-		breakpoint: "640px",
-		width: "100%"
-	}, ]
+	width: "100%",
+	// responsiveWidths: [ {
+	// 	breakpoint: "340px",
+	// 	width: "90%"
+	// }, ],
 });
 
 const headerHamburgerButton = document.querySelector('.header__hamburger-button');
@@ -157,7 +152,6 @@ headerHamburgerButton.addEventListener('click', function (event) {
 	body.classList.add('is-static');
 });
 
-
 const canviNavbarMenuDropdownLink = document.querySelector('.canvi-navbar__menu-dropdown-link');
 canviNavbarMenuDropdownLink.addEventListener('click', function (event) {
 	canviNavbarMenuDropdownLink.classList.toggle('canvi-navbar__menu-dropdown-link--is-active');
@@ -165,7 +159,7 @@ canviNavbarMenuDropdownLink.addEventListener('click', function (event) {
 
 const canviNavbarCloseButton = document.querySelector('.canvi-navbar__close-button');
 canviNavbarCloseButton.addEventListener('click', function (event) {
-  html.classList.remove('is-static');
+	html.classList.remove('is-static');
 	body.classList.remove('is-static');
 	canviMobileNavbar.close();
 });

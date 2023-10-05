@@ -1,7 +1,4 @@
 /* ======= canvi-mobile-navbar START ======= */
-// .canvi-navbar[data-position=left] {
-//     transform: translate3d(calc(-100% - 46px), 0, 0);
-// }
 .canvi-content {
     z-index: 0;
 }
@@ -25,11 +22,6 @@
     right: -48px;
     width: 36px;
     height: 36px;
-    border-radius: 50%;
-    background-color: red;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     z-index: 1;
     &:hover .canvi-navbar__close-button-cross {
         fill: $red;
@@ -37,9 +29,22 @@
 }
 .canvi-navbar__layout {
     padding: 16px 0 70px 12px;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+.canvi-navbar__layout::-webkit-scrollbar {
+    width: 3px; /* ширина scrollbar */
+}
+.canvi-navbar__layout::-webkit-scrollbar-track {
+    background: $grey; /* цвет дорожки */
+}
+.canvi-navbar__layout::-webkit-scrollbar-thumb {
+    background-color: $blue; /* цвет плашки */
+    border-radius: 20px; /* закругления плашки */
 }
 .canvi-navbar__logo {
-    margin-bottom: 10px;
+    margin-bottom: 3px;
     width: 120px;
     height: 33px;
 }
@@ -54,10 +59,10 @@
 }
 .canvi-navbar__menu {
     margin-bottom: 46px;
-    padding-left: 25px;
+    padding-left: 22px;
 }
 .canvi-navbar__menu li {
-    margin-bottom: 20px;
+    margin-bottom: 19px;
     &:last-child {
         margin-bottom: 0;
     } 
@@ -75,7 +80,7 @@
         content: "";
         position: absolute;
         top: 6px;
-        left: -13px;
+        left: -16px;
         border: 5px solid transparent; 
         border-left: 5px solid $blue;
         transition: all 0.3s ease-out;
@@ -107,15 +112,16 @@
     display: block;
 }
 .canvi-navbar__submenu li {
-    margin-bottom: 25px;
+    margin-bottom: 22px;
     &:first-child {
-        padding-top: 25px;
+        padding-top: 22px;
     }
     &:last-child {
         margin-bottom: 0;
     } 
 }
 .canvi-navbar__submenu li a {
+    display: block;
     color: $black;
     font-family: $InterTight-500;
     font-size: 13px;
@@ -124,9 +130,10 @@
     line-height: 1.25;
 }
 .canvi-navbar__phone-block {
-    margin-bottom: 30px;
+    margin-bottom: 28px;
 }
 .canvi-navbar__phone-text {
+    margin-bottom: 2px;
     margin-left: 11px;
     position: relative;
     color: $black;
@@ -150,7 +157,8 @@
     }
 }
 .canvi-navbar__phone {
-    margin-bottom: 30px;
+    display: block;
+    margin-bottom: 12px;
     color: $black;
     font-family: $InterTight-700;
     font-size: 18px;
@@ -164,14 +172,15 @@
     font-size: 13px;
     letter-spacing: 0;
     line-height: 1.25;
-    border-bottom: 1px solid $blue;
+    line-height: 1;
+    border-bottom: 1px dashed $blue;
 }
 .canvi-navbar__social-block {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px 30px;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
 }
 .canvi-navbar__whatsapp-icon {
     width: 36px;
@@ -182,9 +191,10 @@
     height: 36px;
 }
 .canvi-navbar__email-block {
+    padding-left: 11px;
 }
 .canvi-navbar__email-text {
-    margin-left: 11px;
+    margin-bottom: 2px;
     position: relative;
     color: $black;
     font-family: $InterTight-500;
@@ -207,6 +217,7 @@
     }
 }
 .canvi-navbar__email {
+    display: block;
     color: $blue;
     font-family: $InterTight-500;
     font-size: 13px;
