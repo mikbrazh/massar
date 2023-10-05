@@ -152,16 +152,21 @@ headerHamburgerButton.addEventListener('click', function (event) {
 	body.classList.add('is-static');
 });
 
-const canviNavbarMenuDropdownLink = document.querySelector('.canvi-navbar__menu-dropdown-link');
-canviNavbarMenuDropdownLink.addEventListener('click', function (event) {
-	canviNavbarMenuDropdownLink.classList.toggle('canvi-navbar__menu-dropdown-link--is-active');
-});
-
 const canviNavbarCloseButton = document.querySelector('.canvi-navbar__close-button');
 canviNavbarCloseButton.addEventListener('click', function (event) {
 	html.classList.remove('is-static');
 	body.classList.remove('is-static');
 	canviMobileNavbar.close();
+});
+
+const canviNavbarMenuDropdownLinks = document.querySelectorAll('.canvi-navbar__menu-dropdown-link');
+canviNavbarMenuDropdownLinks.forEach(function (item) {
+  item.addEventListener('click', function (event) {
+    if ( this.nextElementSibling ) {
+      this.classList.toggle('canvi-navbar__menu-dropdown-link--is-active');
+      this.nextElementSibling.classList.toggle('canvi-navbar__submenu--is-active');
+    }
+  });
 });
 /* ======= Canvi mobile navbar END ======= */
 /* ======= Main JS END ======= */

@@ -79,37 +79,24 @@
     &:before {
         content: "";
         position: absolute;
-        top: 6px;
-        left: -16px;
+        top: 50%;
+        left: -18px;
+        transform: translateY(-50%);
         border: 5px solid transparent; 
         border-left: 5px solid $blue;
         transition: all 0.3s ease-out;
-        // content: "";
-        // position: absolute;
-        // top: 5px;
-        // left: -16px;
-        // width: 12px;
-        // height: 12px;
-        // background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxMiAxMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTYgNkwxLjUgMS4yMzY4NkwxLjUgMTAuNzYzMUw2IDZaIiBmaWxsPSIjMjcxMjkxIi8+Cjwvc3ZnPgo=");
-        // background-size: cover;
-        // background-position: center;
-        // background-repeat: no-repeat;
-        // transform: translateY(-50%);
-        // transition: transform 0.3s ease;
     }
 }
 .canvi-navbar__menu li a.canvi-navbar__menu-dropdown-link--is-active {
     &:before {
-        top: 9px;
-        left: -15px;
         transform: rotate(90deg);
     }
 }
 .canvi-navbar__submenu {
     display: none;
 }
-.canvi-navbar__menu li:hover > .canvi-navbar__submenu {
-    display: block;
+.canvi-navbar__submenu--is-active {
+  display: block;
 }
 .canvi-navbar__submenu li {
     margin-bottom: 22px;
@@ -128,6 +115,10 @@
     font-weight: 500;
     letter-spacing: 0;
     line-height: 1.25;
+    transition: $button;
+    &:hover {
+      color: $blue;
+    }
 }
 .canvi-navbar__phone-block {
     margin-bottom: 28px;
