@@ -12,6 +12,7 @@
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 10;
+    overflow-y: scroll;
 }
 .modal--open {
     visibility: visible;
