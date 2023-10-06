@@ -140,6 +140,7 @@ var canviMobileNavbar = new Canvi({
 	position: 'left',
 	pushContent: false,
 	width: "100%",
+	speed: "0.5s",
 	// responsiveWidths: [ {
 	// 	breakpoint: "340px",
 	// 	width: "90%"
@@ -162,10 +163,12 @@ canviNavbarCloseButton.addEventListener('click', function (event) {
 const canviNavbarMenuDropdownLinks = document.querySelectorAll('.canvi-navbar__menu-dropdown-link');
 canviNavbarMenuDropdownLinks.forEach(function (item) {
   item.addEventListener('click', function (event) {
-    if ( this.nextElementSibling ) {
-      this.classList.toggle('canvi-navbar__menu-dropdown-link--is-active');
-      this.nextElementSibling.classList.toggle('canvi-navbar__submenu--is-active');
-    }
+	if ( this.nextElementSibling ) {
+		if ( this.nextElementSibling.tagName.toLowerCase() == 'ul' ) { // Проверка на наличие соседнего тега <ul>
+		this.classList.toggle('canvi-navbar__menu-dropdown-link--is-active');
+		this.nextElementSibling.classList.toggle('canvi-navbar__submenu--is-active');
+		}
+	}
   });
 });
 /* ======= Canvi mobile navbar END ======= */

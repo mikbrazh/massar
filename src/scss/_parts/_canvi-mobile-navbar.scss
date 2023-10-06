@@ -60,6 +60,7 @@
 .canvi-navbar__menu {
     margin-bottom: 46px;
     padding-left: 22px;
+    padding-right: 30px;
 }
 .canvi-navbar__menu li {
     margin-bottom: 19px;
@@ -94,10 +95,34 @@
 }
 .canvi-navbar__submenu {
     display: none;
+    // height: 0;
+    // opacity: 0;
+    // visibility: hidden;
+    // transition: padding-bottom 0.5s ease-in-out
+    // animation: qwe 3s ease;
 }
 .canvi-navbar__submenu--is-active {
-  display: block;
+    display: block;
+    // padding-bottom: 100px;
+    // height: auto;
+    // opacity: 1;
+    // visibility: visible;
 }
+
+// @keyframes qwe {
+//     0% {
+//       height: 0;
+
+//     }
+  
+//     50% {
+//       height: 50px;
+//     }
+
+//     100% {
+//         height: 100px;
+//       }
+//   }
 .canvi-navbar__submenu li {
     margin-bottom: 22px;
     &:first-child {
