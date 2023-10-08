@@ -110,5 +110,20 @@
         font-size: 18px;
     }
 }
+
+@media screen and (orientation:landscape) {
+  .modal {
+    align-items: stretch;
+  }
+  .modal-order__layout {
+    margin-top: 50px;
+  }
+  .modal .container {
+    height: 600px;
+  }
+  .modal-order__bg {
+    height: 600px;
+  }
+}
 /* ======= modal Media END ======= */
 /* ======= modal END ======= */
