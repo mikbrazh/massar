@@ -94,11 +94,15 @@
     }
 }
 .canvi-navbar__submenu {
-    display: none;
+    height: 0;
+    overflow: hidden;
+    transition: height 500ms ease;
+    // opacity: 0;
+    // display: none;
 }
-.canvi-navbar__submenu--is-active {
-    display: block;
-}
+// .canvi-navbar__submenu--is-active {
+//     display: block;
+// }
 .canvi-navbar__submenu li {
     margin-bottom: 22px;
     &:first-child {

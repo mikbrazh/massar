@@ -68,7 +68,7 @@ function buildstyles() {
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({overrideBrowserslist: ['> 0.2%, last 10 versions, Firefox ESR']}))
     // .pipe(sourcemaps.write())
-    // .pipe(csso()) // Минификация css
+    .pipe(csso()) // Минификация css
     .pipe(rename({suffix: '.min', prefix: ''}))
     .pipe(dest(''+config.dist+'/css/'))
     .pipe(browsersync.stream());
@@ -88,7 +88,7 @@ function buildvendorstyles() {
     
     .pipe(concat('vendor.min.css'))
     // .pipe(sourcemaps.write())
-    // .pipe(csso()) // Минификация css
+    .pipe(csso()) // Минификация css
     .pipe(dest(''+config.dist+'/css/'))
     .pipe(browsersync.stream());
 }
@@ -100,7 +100,7 @@ function buildjs() {
     // .pipe(sourcemaps.init()) // Для работы должна быть отключена минификация
     .pipe(concat('main.min.js'))
     // .pipe(sourcemaps.write())
-    // .pipe(uglify()) // Минификация js
+    .pipe(uglify()) // Минификация js
     .pipe(dest(''+config.dist+'/js'))
     .pipe(browsersync.stream());
 }
@@ -116,7 +116,7 @@ function buildvendorjs() {
     // .pipe(sourcemaps.init()) // Для работы должна быть отключена минификация
     .pipe(concat('vendor.min.js'))
     // .pipe(sourcemaps.write())
-    // .pipe(uglify()) // Минификация js
+    .pipe(uglify()) // Минификация js
     .pipe(dest(''+config.dist+'/js'))
     .pipe(browsersync.stream());
 }

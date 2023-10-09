@@ -162,14 +162,29 @@ canviNavbarCloseButton.addEventListener('click', function (event) {
 
 const canviNavbarMenuDropdownLinks = document.querySelectorAll('.canvi-navbar__menu-dropdown-link');
 canviNavbarMenuDropdownLinks.forEach(function (item) {
-  item.addEventListener('click', function (event) {
-	if ( this.nextElementSibling ) {
-		if ( this.nextElementSibling.tagName.toLowerCase() == 'ul' ) { // Проверка на наличие соседнего тега <ul>
-		this.classList.toggle('canvi-navbar__menu-dropdown-link--is-active');
-		this.nextElementSibling.classList.toggle('canvi-navbar__submenu--is-active');
+	item.addEventListener('click', function (event) {
+		if ( this.nextElementSibling ) {
+			if ( this.nextElementSibling.tagName.toLowerCase() == 'ul' ) { // Проверка на наличие соседнего тега <ul>
+
+			if (window.getComputedStyle(this.nextElementSibling, null).getPropertyValue("height") === "0px") {
+				this.classList.add('canvi-navbar__menu-dropdown-link--is-active');
+				this.nextElementSibling.style.height = `${ this.nextElementSibling.scrollHeight }px`
+			} else {
+				this.classList.remove('canvi-navbar__menu-dropdown-link--is-active');
+				this.nextElementSibling.style.height = `${ this.nextElementSibling.scrollHeight }px`;
+				window.getComputedStyle(this.nextElementSibling, null).getPropertyValue("height");
+				this.nextElementSibling.style.height = "0";
+			}
+
+			this.nextElementSibling.addEventListener("transitionend", () => {
+				if (this.nextElementSibling.style.height !== "0px") {
+					this.nextElementSibling.style.height = "auto"
+				}
+			});
+
+			}
 		}
-	}
-  });
+	});
 });
 /* ======= Canvi mobile navbar END ======= */
 /* ======= Main JS END ======= */

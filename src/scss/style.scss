@@ -201,6 +201,10 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+.has-hyphens {
+  hyphens: auto;
+}
+
 .input-default {
   width: 100%;
   min-height: 60px;
