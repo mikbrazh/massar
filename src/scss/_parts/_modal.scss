@@ -111,7 +111,7 @@
     }
 }
 
-@media screen and (orientation:landscape) {
+@media (any-pointer: coarse) and (max-height: 414px) {
   .modal {
     align-items: stretch;
   }
