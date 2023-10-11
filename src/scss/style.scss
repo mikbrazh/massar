@@ -83,11 +83,15 @@ dd {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  // font: inherit;
   vertical-align: baseline;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   text-size-adjust: none;
+}
+
+img, video, canvas {
+  overflow: hidden;
 }
 
 a {
