@@ -167,10 +167,16 @@ function killsvg() {
 }
 
 // Конвертация в webp
-function buildwebp() {
-  return src(''+config.src+'/img/**/*.{jpg,jpeg,png}')
-  .pipe(webp( {quality: 50} ))
-  .pipe(dest(''+config.dist+'/img/webp/'));
+function buildwebp1x() {
+  return src(''+config.dist+'/img/@1x/*.{jpg,jpeg,png}')
+  .pipe(webp( {quality: 75} ))
+  .pipe(dest(''+config.dist+'/img/webp/@1x'));
+}
+
+function buildwebp2x() {
+  return src(''+config.dist+'/img/@2x/*.{jpg,jpeg,png}')
+  .pipe(webp( {quality: 75} ))
+  .pipe(dest(''+config.dist+'/img/webp/@2x'));
 }
 
 // Удаление img в каталоге webp
@@ -298,7 +304,7 @@ function killdist() {
 
 // ОТСЛЕЖИВАНИЕ ИЗМЕНЕНИЙ
 function watching() {
-  watch([''+config.src+'/img/**/*'], parallel(buildimg1x, buildimg2x, buildsvg, buildwebp, buildsvgsprite));
+  watch([''+config.src+'/img/**/*'], parallel(buildimg1x, buildimg2x, buildsvg, buildwebp1x, buildwebp2x, buildsvgsprite));
   watch(''+config.src+'/'+config.syntax+'/**/*.'+config.syntax+'', buildstyles);
   watch([''+config.src+'/'+config.syntax+'/vendor.'+config.syntax+'', ''+config.src+'/css/*.css'], buildvendorstyles);
   watch(''+config.src+'/js/**/*.js', buildjs);
@@ -329,7 +335,8 @@ exports.buildsvg          = buildsvg;
 exports.buildvideo        = buildvideo;
 exports.killvideo         = killvideo;
 exports.killsvg           = killsvg;
-exports.buildwebp         = buildwebp;
+exports.buildwebp1x       = buildwebp1x;
+exports.buildwebp2x       = buildwebp2x;
 exports.killwebp          = killwebp;
 exports.buildsvgsprite    = buildsvgsprite;
 exports.killsvgsprite     = killsvgsprite;
@@ -344,11 +351,13 @@ exports.buildpages        = buildpages;
 exports.killpages         = killpages;
 exports.killdist          = killdist;
 
-exports.buildimg          = parallel(buildimg1x, buildimg2x, buildsvg, buildwebp);
+
+exports.buildwebp         = parallel(buildwebp1x, buildwebp2x);
+exports.buildimg          = parallel(buildimg1x, buildimg2x, buildsvg, buildwebp1x, buildwebp2x);
 exports.killimg           = parallel(killimg1x, killimg2x, killsvg, killwebp);
 exports.buildfav          = parallel(buildfavico, buildfavimg);
 exports.buildfonts        = parallel(buildttf, buildwoff, buildwoff2);
 
-exports.build             = series(killdist, parallel(series(includehtml, buildhtml), buildimg1x, buildimg2x, buildsvg, buildwebp, buildfavico, buildfavimg, buildvideo, buildttf, buildwoff, buildwoff2, buildstyles, buildvendorstyles, buildjs, buildvendorjs));
+exports.build             = series(killdist, parallel(series(includehtml, buildhtml), buildimg1x, buildimg2x, buildsvg, buildwebp1x, buildwebp2x, buildfavico, buildfavimg, buildvideo, buildttf, buildwoff, buildwoff2, buildstyles, buildvendorstyles, buildjs, buildvendorjs));
 
 exports.default           = parallel(series(includehtml, buildhtml), buildstyles, buildvendorstyles, buildjs, buildvendorjs, sync, watching);
